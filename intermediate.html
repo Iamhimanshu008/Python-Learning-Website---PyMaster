@@ -32,7 +32,7 @@
 
     <section class="page-hero">
         <h1>⚡ Intermediate Level</h1>
-        <p>Ab real Python power seekho — Functions, OOP, Data Structures aur bahut kuch!</p>
+        <p>Learn real Python power now — Functions, OOP, Data Structures, and more!</p>
     </section>
 
     <div class="container-narrow" style="padding-top:40px;padding-bottom:80px;">
@@ -43,11 +43,11 @@
                 <h2>Functions & Scope 🔧</h2><span class="toggle-icon">▼</span>
             </div>
             <div class="lesson-body">
-                <h3>🔧 Function Kya Hai?</h3>
-                <p>Function ek <strong>reusable code block</strong> hai — ek baar likho, baar baar use karo!</p>
+                <h3>🔧 What is a Function?</h3>
+                <p>A function is a <strong>reusable code block</strong> — write once, use multiple times!</p>
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> Function ek <strong>recipe</strong> jaisa hai — ek baar recipe likh
-                        lo, fir jab chahein woh dish bana lo!</div>
+                    <div><strong>Analogy:</strong> A Function is like a <strong>recipe</strong> — write the recipe once,
+                        then cook the dish whenever you want!</div>
                 </div>
 
                 <div class="code-block">
@@ -55,7 +55,7 @@
                     </div>
                     <pre><code># Basic function
 def greet(name):
-    """Ye function greeting print karta hai"""
+    """This function prints a greeting"""
     print(f"Hello, {name}! Welcome! 🎉")
 
 greet("Himanshu")  # Hello, Himanshu! Welcome! 🎉
@@ -100,7 +100,7 @@ print(square(5))  # 25
 x = 100  # Global
 
 def demo():
-    x = 50  # Local — sirf function ke andar
+    x = 50  # Local — only inside function
     print(f"Inside: {x}")  # 50
 
 demo()
@@ -110,7 +110,7 @@ print(f"Outside: {x}")  # 100</code></pre>
                 <div class="practice-box">
                     <h3>🧩 Practice</h3>
                     <div class="practice-question">
-                        <p><span class="q-num">Q1.</span> Factorial calculate karne wala function banao. <span
+                        <p><span class="q-num">Q1.</span> Create a function to calculate factorial. <span
                                 class="difficulty medium">Medium</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
@@ -125,7 +125,7 @@ print(factorial(5))  # 120</code></pre>
                         </div>
                     </div>
                     <div class="practice-question">
-                        <p><span class="q-num">Q2.</span> Function banao jo check kare number prime hai ya nahi. <span
+                        <p><span class="q-num">Q2.</span> Create a function to check if a number is prime or not. <span
                                 class="difficulty medium">Medium</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
@@ -153,11 +153,11 @@ for num in range(1, 20):
                 <h2>Lists 📋</h2><span class="toggle-icon">▼</span>
             </div>
             <div class="lesson-body">
-                <h3>📋 List Kya Hai?</h3>
-                <p>List ek <strong>ordered, mutable collection</strong> hai — multiple items ek jagah store karo!</p>
+                <h3>📋 What is a List?</h3>
+                <p>A List is an <strong>ordered, mutable collection</strong> — store multiple items in one place!</p>
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> List ek <strong>shopping list</strong> jaisi hai — items add karo,
-                        hatao, order change karo!</div>
+                    <div><strong>Analogy:</strong> A List is like a <strong>shopping list</strong> — add items, remove
+                        them, change order!</div>
                 </div>
 
                 <div class="code-block">
@@ -194,7 +194,7 @@ print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</code></pre>
                 <div class="practice-box">
                     <h3>🧩 Practice</h3>
                     <div class="practice-question">
-                        <p><span class="q-num">Q1.</span> List se second largest number find karo. <span
+                        <p><span class="q-num">Q1.</span> Find the second largest number in a list. <span
                                 class="difficulty medium">Medium</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
@@ -208,8 +208,9 @@ print(f"Second largest: {unique[-2]}")  # 78</code></pre>
                         </div>
                     </div>
                     <div class="practice-question">
-                        <p><span class="q-num">Q2.</span> List comprehension se 1-50 mein sab prime numbers nikalo.
-                            <span class="difficulty hard">Hard</span></p>
+                        <p><span class="q-num">Q2.</span> Find all prime numbers between 1-50 using list comprehension.
+                            <span class="difficulty hard">Hard</span>
+                        </p>
                         <div class="practice-answer">
                             <div class="code-block">
                                 <div class="code-header"><span class="code-lang">Python</span><button
@@ -234,7 +235,7 @@ print(primes)</code></pre>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
-                    <pre><code># Tuple — change nahi ho sakta!
+                    <pre><code># Tuple — cannot be changed (immutable)!
 colors = ("Red", "Green", "Blue")
 print(colors[0])    # Red
 print(len(colors))  # 3
@@ -243,11 +244,11 @@ print(len(colors))  # 3
 x, y, z = colors
 print(x, y, z)  # Red Green Blue
 
-# Single element tuple — comma zaroor lagao!
+# Single element tuple — must add comma!
 single = (42,)  # ✅ Tuple
 not_tuple = (42)  # ❌ Just an integer
 
-# Tuple as dictionary key (list nahi ho sakti key!)
+# Tuple as dictionary key (list cannot be a key!)
 locations = {(28.6, 77.2): "Delhi", (19.0, 72.8): "Mumbai"}</code></pre>
                 </div>
 
@@ -255,7 +256,7 @@ locations = {(28.6, 77.2): "Delhi", (19.0, 72.8): "Mumbai"}</code></pre>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
-                    <pre><code># Set — duplicates automatically remove!
+                    <pre><code># Set — automatically removes duplicates!
 nums = {1, 2, 3, 3, 4, 4, 5}
 print(nums)  # {1, 2, 3, 4, 5}
 
@@ -284,8 +285,8 @@ print(unique)  # [1, 2, 3, 4]</code></pre>
             <div class="lesson-body">
                 <h3>📖 Dictionary — Key-Value Pairs</h3>
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> Dictionary bilkul <strong>real dictionary</strong> jaisa hai — word
-                        (key) dalo, meaning (value) milta hai!</div>
+                    <div><strong>Analogy:</strong> A Dictionary is just like a <strong>real dictionary</strong> — look
+                        up a word (key) to find its meaning (value)!</div>
                 </div>
 
                 <div class="code-block">
@@ -329,8 +330,8 @@ print(students["student2"]["name"])  # Priya</code></pre>
                 <div class="practice-box">
                     <h3>🧩 Practice</h3>
                     <div class="practice-question">
-                        <p><span class="q-num">Q1.</span> String mein har character kitni baar aaya, dictionary se count
-                            karo. <span class="difficulty medium">Medium</span></p>
+                        <p><span class="q-num">Q1.</span> Count how many times each character appears in a string using
+                            a dictionary. <span class="difficulty medium">Medium</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
                                 <div class="code-header"><span class="code-lang">Python</span><button
@@ -394,8 +395,8 @@ with open("data.json", "r") as f:
                 </div>
 
                 <div class="info-box tip"><span class="icon">✅</span>
-                    <div><strong>Always use <code>with</code> statement!</strong> Ye file ko automatically close karta
-                        hai — memory leak nahi hogi.</div>
+                    <div><strong>Always use <code>with</code> statement!</strong> This closes the file automatically —
+                        prevents memory leaks.</div>
                 </div>
             </div>
         </div>
@@ -407,8 +408,8 @@ with open("data.json", "r") as f:
             </div>
             <div class="lesson-body">
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> Exception handling ek <strong>safety net</strong> jaisa hai — agar
-                        tightrope pe se giro to net pakad lega, program crash nahi hoga!</div>
+                    <div><strong>Analogy:</strong> Exception handling is like a <strong>safety net</strong> — if you
+                        fall from a tightrope, the net catches you, and the program doesn't crash!</div>
                 </div>
 
                 <div class="code-block">
@@ -450,8 +451,8 @@ except AgeError as e:
                 <div class="practice-box">
                     <h3>🧩 Practice</h3>
                     <div class="practice-question">
-                        <p><span class="q-num">Q1.</span> Calculator banao jo divide by zero aur invalid input handle
-                            kare. <span class="difficulty medium">Medium</span></p>
+                        <p><span class="q-num">Q1.</span> Create a calculator that handles divide by zero and invalid
+                            input. <span class="difficulty medium">Medium</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
                                 <div class="code-header"><span class="code-lang">Python</span><button
@@ -479,18 +480,18 @@ except ValueError: print("Invalid number!")</code></pre>
                 <h2>OOP — Classes & Objects 🏗️</h2><span class="toggle-icon">▼</span>
             </div>
             <div class="lesson-body">
-                <h3>🏗️ OOP Kya Hai?</h3>
-                <p>OOP mein hum real-world cheezein code mein represent karte hain using <strong>Classes</strong>
-                    (blueprint) aur <strong>Objects</strong> (actual thing).</p>
+                <h3>🏗️ What is OOP?</h3>
+                <p>In OOP, we represent real-world things in code using <strong>Classes</strong>
+                    (blueprint) and <strong>Objects</strong> (actual thing).</p>
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> Class = <strong>House ka blueprint</strong>, Object = <strong>Actual
-                            ghar</strong> jo us blueprint se bana!</div>
+                    <div><strong>Analogy:</strong> Class = <strong>Blueprint of a house</strong>, Object =
+                        <strong>Actual house</strong> built from that blueprint!</div>
                 </div>
 
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
-                    <pre><code># Class define karo
+                    <pre><code># Define a Class
 class Student:
     def __init__(self, name, age, course):
         self.name = name
@@ -503,7 +504,7 @@ class Student:
     def is_adult(self):
         return self.age >= 18
 
-# Objects banao
+# Create Objects
 s1 = Student("Himanshu", 20, "B.Tech")
 s2 = Student("Priya", 17, "12th")
 
@@ -512,7 +513,7 @@ print(s1.is_adult())  # True
 print(s2.is_adult())  # False</code></pre>
                 </div>
 
-                <h3>🧬 Inheritance — Parent se properties le lo!</h3>
+                <h3>🧬 Inheritance — Inherit properties from Parent!</h3>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
@@ -542,8 +543,8 @@ for animal in animals:
                 <div class="practice-box">
                     <h3>🧩 Practice</h3>
                     <div class="practice-question">
-                        <p><span class="q-num">Q1.</span> BankAccount class banao with deposit, withdraw, aur balance
-                            check. <span class="difficulty hard">Hard</span></p>
+                        <p><span class="q-num">Q1.</span> Create a BankAccount class with deposit, withdraw, and check
+                            balance methods. <span class="difficulty hard">Hard</span></p>
                         <div class="practice-answer">
                             <div class="code-block">
                                 <div class="code-header"><span class="code-lang">Python</span><button
@@ -583,7 +584,7 @@ acc.withdraw(200)  # Balance: ₹1300</code></pre>
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>🐍 PyMaster</h4>
-                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Learning Python made easy!</p>
                 </div>
                 <div class="footer-col">
                     <h4>Levels</h4>

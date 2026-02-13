@@ -190,10 +190,10 @@ print(os.listdir("."))    # Files in directory
                 <h2>Decorators & Generators ⚙️</h2><span class="toggle-icon">▼</span>
             </div>
             <div class="lesson-body">
-                <h3>🎀 Decorators — Functions ko Superpower do!</h3>
+                <h3>🎀 Decorators — Give Superpowers to Functions!</h3>
                 <div class="info-box hinglish"><span class="icon">💡</span>
-                    <div><strong>Analogy:</strong> Decorator ek <strong>gift wrapper</strong> jaisa hai — function
-                        (gift) ko extra features (wrapping) add karta hai bina gift ko change kiye!</div>
+                    <div><strong>Analogy:</strong> A Decorator is like a <strong>gift wrapper</strong> — it adds extra
+                        features (wrapping) to a function (gift) without changing the gift itself!</div>
                 </div>
 
                 <div class="code-block">
@@ -201,7 +201,7 @@ print(os.listdir("."))    # Files in directory
                     </div>
                     <pre><code>import time
 
-# Timer decorator — function kitna time leti hai
+# Timer decorator — measures how much time a function takes
 def timer(func):
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -236,7 +236,7 @@ def multiply(a, b):
 multiply(5, 3)</code></pre>
                 </div>
 
-                <h3>🔄 Generators — yield se Lazy Evaluation</h3>
+                <h3>🔄 Generators — Lazy Evaluation with yield</h3>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
@@ -261,9 +261,9 @@ for _ in range(10):
     print(next(fib), end=" ")
 # 0 1 1 2 3 5 8 13 21 34
 
-# Generator expression (list comprehension jaisa but lazy)
+# Generator expression (like list comprehension but lazy)
 squares_gen = (x**2 for x in range(1000000))
-print(next(squares_gen))  # 0  — Memory mein sab nahi load hota!</code></pre>
+print(next(squares_gen))  # 0  — Does not load everything in memory!</code></pre>
                 </div>
             </div>
         </div>
@@ -283,16 +283,16 @@ add = lambda a, b: a + b
 print(square(5))   # 25
 print(add(3, 7))   # 10
 
-# map() — Har element pe function lagao
+# map() — Apply function to every element
 numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x**2, numbers))
 print(squared)  # [1, 4, 9, 16, 25]
 
-# filter() — Condition ke basis pe filter karo
+# filter() — Filter based on condition
 evens = list(filter(lambda x: x % 2 == 0, range(1, 21)))
 print(evens)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-# reduce() — Sab ko combine karo
+# reduce() — Combine all elements
 from functools import reduce
 total = reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])
 print(total)  # 15
@@ -352,14 +352,14 @@ print(result)  # Phone: ***</code></pre>
                 <h2>APIs & Web Scraping 🌐</h2><span class="toggle-icon">▼</span>
             </div>
             <div class="lesson-body">
-                <h3>🔗 APIs — Data Fetch Karo Internet Se!</h3>
+                <h3>🔗 APIs — Fetch Data from the Internet!</h3>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
                     <pre><code># pip install requests
 import requests
 
-# GET request — Data fetch karo
+# GET request — Fetch data
 response = requests.get("https://jsonplaceholder.typicode.com/users/1")
 if response.status_code == 200:
     data = response.json()
@@ -373,7 +373,7 @@ if response.status_code == 200:
 # print(f"Temp: {weather['main']['temp']}K")</code></pre>
                 </div>
 
-                <h3>🕷️ Web Scraping — Websites se Data Nikalo!</h3>
+                <h3>🕷️ Web Scraping — Extract Data from Websites!</h3>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
@@ -395,8 +395,8 @@ for quote, author in zip(quotes[:5], authors[:5]):
                 </div>
 
                 <div class="info-box warning"><span class="icon">⚠️</span>
-                    <div><strong>Important:</strong> Scraping se pehle website ki <code>robots.txt</code> check karo aur
-                        terms of service follow karo!</div>
+                    <div><strong>Important:</strong> Before scraping, check <code>robots.txt</code> and follow terms of
+                        service!</div>
                 </div>
             </div>
         </div>
@@ -469,7 +469,7 @@ print(df.describe())          # Statistics
 print(df[df["Marks"] > 80])   # Filter</code></pre>
                 </div>
 
-                <h3>🤖 Simple ML — Predict karo!</h3>
+                <h3>🤖 Simple ML — Make Predictions!</h3>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
                     </div>
@@ -492,7 +492,7 @@ print(f"📈 {study_hours} hours study → {predicted_marks[0]:.0f} marks predic
                 </div>
 
                 <div class="info-box tip"><span class="icon">🚀</span>
-                    <div>Yeh sirf introduction hai! ML ke liye complete learning path: NumPy → Pandas → Matplotlib →
+                    <div>This is just an introduction! Complete learning path for ML: NumPy → Pandas → Matplotlib →
                         Scikit-learn → TensorFlow/PyTorch</div>
                 </div>
             </div>
@@ -509,7 +509,7 @@ print(f"📈 {study_hours} hours study → {predicted_marks[0]:.0f} marks predic
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>🐍 PyMaster</h4>
-                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Learning Python made easy!</p>
                 </div>
                 <div class="footer-col">
                     <h4>Levels</h4>
