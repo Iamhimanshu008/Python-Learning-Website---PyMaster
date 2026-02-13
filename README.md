@@ -46,7 +46,7 @@ A modern, beginner-friendly Python learning website with interactive examples, p
 ## 🏁 Getting Started
 
 1. Clone: `git clone https://github.com/YOUR_USERNAME/pymaster.git`
-2. Open `index.html` in your browser
+2. Open `https://iamhimanshu008.github.io/Python-Learning-Website---PyMaster/` in your browser
 3. Start learning Python! 🎉
 
 ## 📄 License
