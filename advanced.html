@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PyMaster Advanced Level - Decorators, Generators, APIs, Web Scraping, ML and more.">
+    <title>Advanced Level - PyMaster 🔥</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html" class="active">Advanced</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>🔥 Advanced Level</h1>
+        <p>Industry-level Python skills — Decorators, APIs, Web Scraping, Data Science & ML!</p>
+    </section>
+
+    <div class="container-narrow" style="padding-top:40px;padding-bottom:80px;">
+
+        <!-- LESSON 1: Advanced OOP -->
+        <div class="lesson open">
+            <div class="lesson-header"><span class="lesson-num">1</span>
+                <h2>Advanced OOP 🏛️</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>✨ Magic/Dunder Methods</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"Vector({self.x}, {self.y})"
+
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __len__(self):
+        return int((self.x**2 + self.y**2)**0.5)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+v1 = Vector(3, 4)
+v2 = Vector(1, 2)
+print(v1 + v2)   # Vector(4, 6)
+print(len(v1))    # 5</code></pre>
+                </div>
+
+                <h3>🔒 Encapsulation & Property Decorator</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>class Temperature:
+    def __init__(self, celsius=0):
+        self._celsius = celsius
+
+    @property
+    def celsius(self):
+        return self._celsius
+
+    @celsius.setter
+    def celsius(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature below absolute zero!")
+        self._celsius = value
+
+    @property
+    def fahrenheit(self):
+        return (self._celsius * 9/5) + 32
+
+temp = Temperature(100)
+print(temp.fahrenheit)  # 212.0
+temp.celsius = 37
+print(f"{temp.celsius}°C = {temp.fahrenheit}°F")
+# 37°C = 98.6°F</code></pre>
+                </div>
+
+                <h3>🏗️ Abstract Classes</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14159 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+
+class Rectangle(Shape):
+    def __init__(self, w, h):
+        self.w, self.h = w, h
+
+    def area(self):
+        return self.w * self.h
+
+    def perimeter(self):
+        return 2 * (self.w + self.h)
+
+shapes = [Circle(5), Rectangle(4, 6)]
+for s in shapes:
+    print(f"{s.__class__.__name__}: Area={s.area():.2f}")
+# Circle: Area=78.54
+# Rectangle: Area=24.00</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 2: Modules & Packages -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">2</span>
+                <h2>Modules & Packages 📦</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Built-in modules
+import math
+print(math.pi)          # 3.141592653589793
+print(math.sqrt(144))   # 12.0
+print(math.factorial(5))  # 120
+
+import random
+print(random.randint(1, 100))     # Random number
+print(random.choice(["A","B","C"]))  # Random pick
+items = [1, 2, 3, 4, 5]
+random.shuffle(items)               # Shuffle list
+
+import datetime
+now = datetime.datetime.now()
+print(now.strftime("%d-%m-%Y %H:%M"))  # 13-02-2026 00:00
+
+import os
+print(os.getcwd())        # Current directory
+print(os.listdir("."))    # Files in directory
+
+# Creating your own module — save as mymath.py
+# def add(a, b): return a + b
+# def multiply(a, b): return a * b
+# Then: import mymath; mymath.add(5, 3)
+
+# Installing packages with pip
+# pip install requests
+# pip install pandas numpy matplotlib</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 3: Decorators & Generators -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">3</span>
+                <h2>Decorators & Generators ⚙️</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🎀 Decorators — Functions ko Superpower do!</h3>
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Decorator ek <strong>gift wrapper</strong> jaisa hai — function
+                        (gift) ko extra features (wrapping) add karta hai bina gift ko change kiye!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>import time
+
+# Timer decorator — function kitna time leti hai
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"⏱️ {func.__name__} took {end-start:.4f}s")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    time.sleep(1)
+    print("Done!")
+
+slow_function()
+# Done!
+# ⏱️ slow_function took 1.0012s
+
+# Logger decorator
+def logger(func):
+    def wrapper(*args, **kwargs):
+        print(f"📝 Calling: {func.__name__}({args}, {kwargs})")
+        result = func(*args, **kwargs)
+        print(f"📤 Returned: {result}")
+        return result
+    return wrapper
+
+@logger
+def multiply(a, b):
+    return a * b
+
+multiply(5, 3)</code></pre>
+                </div>
+
+                <h3>🔄 Generators — yield se Lazy Evaluation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Generator function — memory efficient!
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+for num in countdown(5):
+    print(num, end=" ")  # 5 4 3 2 1
+
+# Infinite generator
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+fib = fibonacci()
+for _ in range(10):
+    print(next(fib), end=" ")
+# 0 1 1 2 3 5 8 13 21 34
+
+# Generator expression (list comprehension jaisa but lazy)
+squares_gen = (x**2 for x in range(1000000))
+print(next(squares_gen))  # 0  — Memory mein sab nahi load hota!</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 4: Lambda, Map, Filter -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">4</span>
+                <h2>Lambda, Map, Filter, Reduce 🧮</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Lambda — Anonymous one-liner functions
+square = lambda x: x ** 2
+add = lambda a, b: a + b
+print(square(5))   # 25
+print(add(3, 7))   # 10
+
+# map() — Har element pe function lagao
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # [1, 4, 9, 16, 25]
+
+# filter() — Condition ke basis pe filter karo
+evens = list(filter(lambda x: x % 2 == 0, range(1, 21)))
+print(evens)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# reduce() — Sab ko combine karo
+from functools import reduce
+total = reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])
+print(total)  # 15
+
+# Practical example — Sort by second element
+students = [("Rahul", 85), ("Priya", 92), ("Amit", 78)]
+students.sort(key=lambda x: x[1], reverse=True)
+print(students)  # [('Priya', 92), ('Rahul', 85), ('Amit', 78)]</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 5: Regex -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">5</span>
+                <h2>Regular Expressions 🔍</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>import re
+
+# Find pattern
+text = "My phone: 9876543210, email: test@gmail.com"
+
+# Find phone number
+phone = re.search(r"\d{10}", text)
+print(phone.group())  # 9876543210
+
+# Find email
+email = re.search(r"[\w.]+@[\w.]+", text)
+print(email.group())  # test@gmail.com
+
+# Find all numbers
+nums = re.findall(r"\d+", "I have 3 cats and 5 dogs")
+print(nums)  # ['3', '5']
+
+# Validate email
+def is_valid_email(email):
+    pattern = r'^[\w.]+@[\w]+\.[\w.]+$'
+    return bool(re.match(pattern, email))
+
+print(is_valid_email("test@gmail.com"))   # True
+print(is_valid_email("invalid@"))         # False
+
+# Replace text
+result = re.sub(r"\d+", "***", "Phone: 12345")
+print(result)  # Phone: ***</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 6: APIs & Web Scraping -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">6</span>
+                <h2>APIs & Web Scraping 🌐</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🔗 APIs — Data Fetch Karo Internet Se!</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># pip install requests
+import requests
+
+# GET request — Data fetch karo
+response = requests.get("https://jsonplaceholder.typicode.com/users/1")
+if response.status_code == 200:
+    data = response.json()
+    print(f"Name: {data['name']}")
+    print(f"Email: {data['email']}")
+
+# Weather API example (pseudo code)
+# api_key = "your_api_key"
+# url = f"http://api.openweathermap.org/data/2.5/weather?q=Delhi&appid={api_key}"
+# weather = requests.get(url).json()
+# print(f"Temp: {weather['main']['temp']}K")</code></pre>
+                </div>
+
+                <h3>🕷️ Web Scraping — Websites se Data Nikalo!</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># pip install beautifulsoup4
+from bs4 import BeautifulSoup
+import requests
+
+# Scrape a webpage
+url = "https://quotes.toscrape.com/"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Find all quotes
+quotes = soup.find_all("span", class_="text")
+authors = soup.find_all("small", class_="author")
+
+for quote, author in zip(quotes[:5], authors[:5]):
+    print(f'"{quote.text}" — {author.text}')</code></pre>
+                </div>
+
+                <div class="info-box warning"><span class="icon">⚠️</span>
+                    <div><strong>Important:</strong> Scraping se pehle website ki <code>robots.txt</code> check karo aur
+                        terms of service follow karo!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 7: Multithreading -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">7</span>
+                <h2>Multithreading & Multiprocessing ⚡</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>import threading
+import time
+
+def download_file(filename):
+    print(f"⬇️ Downloading {filename}...")
+    time.sleep(2)  # Simulate download
+    print(f"✅ {filename} downloaded!")
+
+# Without threading — 6 seconds total
+# download_file("file1.pdf")
+# download_file("file2.pdf")
+# download_file("file3.pdf")
+
+# With threading — ~2 seconds total! 🚀
+threads = []
+for f in ["file1.pdf", "file2.pdf", "file3.pdf"]:
+    t = threading.Thread(target=download_file, args=(f,))
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+print("All downloads complete! 🎉")</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 8: Data Science & ML Intro -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">8</span>
+                <h2>Data Science & ML Intro 🤖</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📊 NumPy & Pandas Basics</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># pip install numpy pandas matplotlib scikit-learn
+import numpy as np
+import pandas as pd
+
+# NumPy — Fast numerical computing
+arr = np.array([1, 2, 3, 4, 5])
+print(arr * 2)        # [2, 4, 6, 8, 10]
+print(np.mean(arr))   # 3.0
+print(np.std(arr))    # 1.414
+
+# Pandas — Data manipulation
+data = {
+    "Name": ["Rahul", "Priya", "Amit"],
+    "Marks": [85, 92, 78],
+    "City": ["Delhi", "Mumbai", "Pune"]
+}
+df = pd.DataFrame(data)
+print(df)
+print(df.describe())          # Statistics
+print(df[df["Marks"] > 80])   # Filter</code></pre>
+                </div>
+
+                <h3>🤖 Simple ML — Predict karo!</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Training data — Study hours vs Marks
+hours = np.array([1, 2, 3, 4, 5, 6, 7, 8]).reshape(-1, 1)
+marks = np.array([20, 35, 45, 55, 65, 72, 80, 88])
+
+# Train model
+model = LinearRegression()
+model.fit(hours, marks)
+
+# Predict!
+study_hours = 10
+predicted_marks = model.predict([[study_hours]])
+print(f"📈 {study_hours} hours study → {predicted_marks[0]:.0f} marks predicted!")
+# ~100 marks predicted!</code></pre>
+                </div>
+
+                <div class="info-box tip"><span class="icon">🚀</span>
+                    <div>Yeh sirf introduction hai! ML ke liye complete learning path: NumPy → Pandas → Matplotlib →
+                        Scikit-learn → TensorFlow/PyTorch</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="practice.html" class="btn btn-accent" style="font-size:1.1rem;padding:16px 40px;">💻 Practice Now
+                →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

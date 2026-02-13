@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PyMaster Practice - Interactive Python playground, practice problems, and coding challenges.">
+    <title>Practice - PyMaster 💻</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="practice.html" class="active">Practice</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>💻 Practice & Playground</h1>
+        <p>Code likho, run karo, aur Python master karo — sab kuch browser mein!</p>
+    </section>
+
+    <div class="container" style="padding-top:40px;padding-bottom:80px;">
+
+        <!-- CODE PLAYGROUND -->
+        <div class="section-header reveal">
+            <span class="badge">Interactive</span>
+            <h2>🎮 Python Playground</h2>
+            <p>Yahan apna Python code likho aur turant output dekho!</p>
+        </div>
+
+        <div class="playground reveal" style="margin-bottom:60px;">
+            <div class="playground-header">
+                <h3>📝 Python Editor</h3>
+                <div style="display:flex;gap:8px;">
+                    <button id="clear-btn" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">🗑️
+                        Clear</button>
+                    <button id="run-btn" class="run-btn">▶ Run Code</button>
+                </div>
+            </div>
+            <div class="playground-editor">
+                <textarea id="playground-editor" spellcheck="false" placeholder="# Apna Python code yahan likho...
+# Example:
+print('Hello, PyMaster! 🐍')
+
+name = 'Himanshu'
+age = 20
+print(f'Name: {name}, Age: {age}')
+">print("Hello, PyMaster! 🐍")
+
+name = "Himanshu"
+age = 20
+print(f"Mera naam {name} hai")
+print(f"Main {age} saal ka hoon")
+print(f"Next year main {age + 1} ka hounga!")
+
+for i in range(1, 6):
+    print(f"⭐" * i)</textarea>
+            </div>
+            <div class="playground-output" id="playground-output"># Output will appear here...</div>
+        </div>
+
+        <!-- SAMPLE CODES -->
+        <div class="section-header reveal">
+            <span class="badge">Try These</span>
+            <h2>📋 Sample Programs</h2>
+            <p>Click karo aur playground mein code load ho jayega!</p>
+        </div>
+        <div class="features-grid reveal" style="margin-bottom:60px;">
+            <div class="feature-card" style="cursor:pointer;"
+                onclick="loadSample('# Calculator\na = float(input(&quot;Number 1: &quot;))\nb = float(input(&quot;Number 2: &quot;))\nprint(f&quot;Sum: {a+b}&quot;)\nprint(f&quot;Diff: {a-b}&quot;)\nprint(f&quot;Product: {a*b}&quot;)\nprint(f&quot;Division: {a/b}&quot;)')">
+                <div class="card-icon green">🧮</div>
+                <h3>Calculator</h3>
+                <p>Simple arithmetic calculator</p>
+            </div>
+            <div class="feature-card" style="cursor:pointer;"
+                onclick="loadSample('# Fibonacci Series\nn = 10\na, b = 0, 1\nprint(f&quot;First {n} Fibonacci numbers:&quot;)\nfor _ in range(n):\n    print(a, end=&quot; &quot;)\n    a, b = b, a + b')">
+                <div class="card-icon blue">🔢</div>
+                <h3>Fibonacci Series</h3>
+                <p>First N fibonacci numbers</p>
+            </div>
+            <div class="feature-card" style="cursor:pointer;"
+                onclick="loadSample('# Star Pattern\nn = 5\nfor i in range(1, n+1):\n    print(&quot;⭐&quot; * i)\nprint()\nfor i in range(n, 0, -1):\n    print(&quot;⭐&quot; * i)')">
+                <div class="card-icon purple">⭐</div>
+                <h3>Star Pattern</h3>
+                <p>Triangle star pattern</p>
+            </div>
+            <div class="feature-card" style="cursor:pointer;"
+                onclick="loadSample('# Multiplication Table\nnum = 7\nprint(f&quot;Multiplication Table of {num}&quot;)\nprint(&quot;-&quot; * 25)\nfor i in range(1, 11):\n    print(f&quot;{num} x {i:2d} = {num*i:3d}&quot;)')">
+                <div class="card-icon orange">📊</div>
+                <h3>Multiplication Table</h3>
+                <p>Any number ka table</p>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEMS -->
+        <div class="section-header reveal">
+            <span class="badge">Challenge Yourself</span>
+            <h2>🧩 Practice Problems</h2>
+            <p>Level-wise problems — click karke solution dekho!</p>
+        </div>
+
+        <div class="tabs reveal">
+            <button class="tab-btn active" data-tab="easy-tab">🟢 Easy</button>
+            <button class="tab-btn" data-tab="medium-tab">🟡 Medium</button>
+            <button class="tab-btn" data-tab="hard-tab">🔴 Hard</button>
+        </div>
+
+        <!-- EASY -->
+        <div id="easy-tab" class="tab-content active">
+            <div class="practice-box" style="border-color:var(--accent-green);">
+                <h3 style="color:var(--accent-green);">🟢 Easy Problems</h3>
+
+                <div class="practice-question">
+                    <p><span class="q-num">Q1.</span> Swap two numbers without using a third variable.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>a, b = 10, 20
+print(f"Before: a={a}, b={b}")
+a, b = b, a
+print(f"After: a={a}, b={b}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q2.</span> Check if a number is even or odd.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>num = int(input("Number: "))
+print(f"{num} is {'Even' if num%2==0 else 'Odd'}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q3.</span> Find the largest of three numbers.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>a, b, c = 15, 42, 28
+largest = max(a, b, c)
+print(f"Largest: {largest}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q4.</span> Sum of digits of a number (e.g., 123 → 1+2+3 = 6).</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>num = int(input("Number: "))
+digit_sum = sum(int(d) for d in str(num))
+print(f"Sum of digits: {digit_sum}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q5.</span> Reverse a string.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>text = input("Enter string: ")
+print(f"Reversed: {text[::-1]}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q6.</span> Count vowels in a string.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>text = input("String: ").lower()
+vowels = sum(1 for c in text if c in "aeiou")
+print(f"Vowels: {vowels}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q7.</span> Print multiplication table of any number.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>n = int(input("Number: "))
+for i in range(1, 11):
+    print(f"{n} x {i} = {n*i}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q8.</span> Simple interest calculator (SI = P*R*T/100).</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>p = float(input("Principal: "))
+r = float(input("Rate (%): "))
+t = float(input("Time (years): "))
+si = (p * r * t) / 100
+print(f"Simple Interest: ₹{si:.2f}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEDIUM -->
+        <div id="medium-tab" class="tab-content">
+            <div class="practice-box" style="border-color:var(--accent-orange);">
+                <h3 style="color:var(--accent-orange);">🟡 Medium Problems</h3>
+
+                <div class="practice-question">
+                    <p><span class="q-num">Q1.</span> Check if a number is prime.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>def is_prime(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0: return False
+    return True
+
+num = int(input("Number: "))
+print(f"{num} is {'Prime ✅' if is_prime(num) else 'Not Prime ❌'}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q2.</span> Check if a string is palindrome.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>text = input("String: ").lower().replace(" ", "")
+print(f"Palindrome: {'Yes ✅' if text == text[::-1] else 'No ❌'}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q3.</span> Sort a list without using sort() function.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code># Bubble Sort
+nums = [64, 34, 25, 12, 22, 11, 90]
+n = len(nums)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if nums[j] > nums[j+1]:
+            nums[j], nums[j+1] = nums[j+1], nums[j]
+print(f"Sorted: {nums}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q4.</span> Find the second largest number in a list.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>nums = [45, 12, 78, 34, 90, 23]
+unique = list(set(nums))
+unique.sort()
+print(f"Second Largest: {unique[-2]}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q5.</span> Count word frequency in a sentence.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>text = "apple banana apple cherry banana apple"
+freq = {}
+for word in text.split():
+    freq[word] = freq.get(word, 0) + 1
+for word, count in sorted(freq.items(), key=lambda x: -x[1]):
+    print(f"{word}: {count}")</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q6.</span> Matrix addition (2D list).</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>A = [[1,2,3],[4,5,6],[7,8,9]]
+B = [[9,8,7],[6,5,4],[3,2,1]]
+result = [[A[i][j]+B[i][j] for j in range(3)] for i in range(3)]
+for row in result:
+    print(row)
+# [10,10,10] [10,10,10] [10,10,10]</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HARD -->
+        <div id="hard-tab" class="tab-content">
+            <div class="practice-box" style="border-color:var(--accent-red);">
+                <h3 style="color:var(--accent-red);">🔴 Hard Problems</h3>
+
+                <div class="practice-question">
+                    <p><span class="q-num">Q1.</span> Implement a Stack using a class.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>class Stack:
+    def __init__(self):
+        self.items = []
+    def push(self, item):
+        self.items.append(item)
+    def pop(self):
+        return self.items.pop() if self.items else "Stack Empty!"
+    def peek(self):
+        return self.items[-1] if self.items else None
+    def size(self):
+        return len(self.items)
+
+s = Stack()
+s.push(10); s.push(20); s.push(30)
+print(s.pop())   # 30
+print(s.peek())  # 20</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q2.</span> Binary search algorithm implement karo.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target: return mid
+        elif arr[mid] < target: low = mid + 1
+        else: high = mid - 1
+    return -1
+
+nums = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+idx = binary_search(nums, 23)
+print(f"Found at index: {idx}")  # 5</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q3.</span> Decorator banao jo function execution time measure kare.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>import time
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"⏱️ {func.__name__}: {time.time()-start:.4f}s")
+        return result
+    return wrapper
+
+@timer
+def slow_sum(n):
+    return sum(range(n))
+
+slow_sum(10_000_000)</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="practice-question">
+                    <p><span class="q-num">Q4.</span> Linked List implement karo.</p>
+                    <div class="practice-answer">
+                        <div class="code-block">
+                            <div class="code-header"><span class="code-lang">Python</span><button
+                                    class="copy-btn">Copy</button></div>
+                            <pre><code>class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new = Node(data)
+        if not self.head:
+            self.head = new; return
+        curr = self.head
+        while curr.next: curr = curr.next
+        curr.next = new
+    def display(self):
+        curr = self.head
+        while curr:
+            print(curr.data, end=" → ")
+            curr = curr.next
+        print("None")
+
+ll = LinkedList()
+for x in [10,20,30,40]: ll.append(x)
+ll.display()  # 10 → 20 → 30 → 40 → None</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/playground.js"></script>
+</body>
+
+</html>

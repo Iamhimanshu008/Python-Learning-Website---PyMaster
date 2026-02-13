@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PyMaster Beginner Level - Learn Python basics: variables, loops, conditions, strings with detailed examples.">
+    <title>Beginner Level - PyMaster 🌱</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html" class="active">Beginner</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <h1>🌱 Beginner Level</h1>
+        <p>Python ki duniya mein apna pehla kadam rakho — zero se hero tak ka safar yahan se shuru hota hai!</p>
+    </section>
+
+    <div class="container-narrow" style="padding-top:40px; padding-bottom:80px;">
+
+        <!-- LESSON 1: What is Python -->
+        <div class="lesson open">
+            <div class="lesson-header">
+                <span class="lesson-num">1</span>
+                <h2>What is Python? 🐍</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🤔 Python Kya Hai?</h3>
+                <p>Python ek <strong>high-level programming language</strong> hai jo 1991 mein <strong>Guido van
+                        Rossum</strong> ne banai thi. Isko simple aur readable banaya gaya hai — bilkul English padhne
+                    jaisa!</p>
+
+                <div class="info-box hinglish">
+                    <span class="icon">💡</span>
+                    <div><strong>Real-Life Analogy:</strong> Jaise Hindi ya English ek language hai jisse hum logon se
+                        baat karte hain, waise Python ek language hai jisse hum <strong>computer se baat</strong> karte
+                        hain!</div>
+                </div>
+
+                <h3>🌟 Python Kyun Seekhein?</h3>
+                <ul>
+                    <li>🧠 <strong>Easy to Learn</strong> — Sabse simple syntax hai, beginners ke liye perfect</li>
+                    <li>💼 <strong>High Demand</strong> — Google, Netflix, Instagram sab Python use karte hain</li>
+                    <li>🔧 <strong>Versatile</strong> — Web dev, AI, Data Science, Automation sab mein kaam aata hai
+                    </li>
+                    <li>📚 <strong>Huge Community</strong> — Lakho libraries aur resources free mein available hain</li>
+                    <li>💰 <strong>High Salary</strong> — Python developers ki demand aur salary dono high hai</li>
+                </ul>
+
+                <h3>🏗️ Python Kahan Use Hota Hai?</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Use Case</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Websites banana</td>
+                            <td>Instagram, Pinterest</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science</td>
+                            <td>Data analysis</td>
+                            <td>Netflix recommendations</td>
+                        </tr>
+                        <tr>
+                            <td>AI/ML</td>
+                            <td>Smart apps banana</td>
+                            <td>ChatGPT, Self-driving cars</td>
+                        </tr>
+                        <tr>
+                            <td>Automation</td>
+                            <td>Boring tasks automate</td>
+                            <td>File organizer, Email sender</td>
+                        </tr>
+                        <tr>
+                            <td>Game Dev</td>
+                            <td>Games banana</td>
+                            <td>Pygame projects</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Python vs Other Languages — See the difference!
+
+# Python mein Hello World:
+print("Hello, World!")
+
+# Java mein (kitna lamba hai!):
+# public class Main {
+#     public static void main(String[] args) {
+#         System.out.println("Hello, World!");
+#     }
+# }</code></pre>
+                </div>
+                <div class="info-box tip">
+                    <span class="icon">✅</span>
+                    <div>Python mein ek line mein ho jaata hai jo Java mein 5 lines lagti hain!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 2: Installing Python -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">2</span>
+                <h2>Installing Python 💻</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📥 Python Download Kaise Karein?</h3>
+                <p>Python install karna bahut easy hai. Bas <a href="https://python.org/downloads"
+                        target="_blank">python.org</a> pe jaao aur download karo!</p>
+
+                <h3>🪟 Windows pe Installation</h3>
+                <ol>
+                    <li><a href="https://python.org/downloads" target="_blank">python.org/downloads</a> pe jao</li>
+                    <li>"Download Python 3.x" button click karo</li>
+                    <li>Installer open karo</li>
+                    <li>⚠️ <strong>"Add Python to PATH" checkbox zaroor tick karo!</strong></li>
+                    <li>"Install Now" click karo</li>
+                    <li>Done! Terminal mein check karo:</li>
+                </ol>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Terminal</span><button
+                            class="copy-btn">Copy</button></div>
+                    <pre><code>python --version
+# Output: Python 3.12.x</code></pre>
+                </div>
+
+                <h3>🍎 Mac pe Installation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Terminal</span><button
+                            class="copy-btn">Copy</button></div>
+                    <pre><code># Homebrew se install karo (recommended)
+brew install python3
+
+# Check version
+python3 --version</code></pre>
+                </div>
+
+                <h3>🐧 Linux pe Installation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Terminal</span><button
+                            class="copy-btn">Copy</button></div>
+                    <pre><code># Ubuntu/Debian
+sudo apt update
+sudo apt install python3 python3-pip
+
+# Check version
+python3 --version</code></pre>
+                </div>
+
+                <h3>🛠️ Best Code Editors</h3>
+                <ul>
+                    <li>🥇 <strong>VS Code</strong> — Sabse popular, free, bahut sari extensions</li>
+                    <li>🥈 <strong>PyCharm</strong> — Python ke liye dedicated IDE</li>
+                    <li>🥉 <strong>Jupyter Notebook</strong> — Data Science ke liye best</li>
+                    <li>🌐 <strong>Google Colab</strong> — Browser mein code karo, install ki zaroorat nahi!</li>
+                </ul>
+
+                <div class="info-box tip">
+                    <span class="icon">💡</span>
+                    <div><strong>Tip:</strong> Agar install nahi karna chahte, to <a href="https://colab.google.com"
+                            target="_blank">Google Colab</a> ya <a href="https://replit.com" target="_blank">Replit</a>
+                        pe browser mein hi Python chalao!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 3: First Program -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">3</span>
+                <h2>Your First Program — Hello World! 🎉</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📝 print() Function</h3>
+                <p><code>print()</code> Python ka sabse basic function hai — ye screen pe kuch bhi dikhata hai.</p>
+
+                <div class="info-box hinglish">
+                    <span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> <code>print()</code> ko samjho ek <strong>speaker</strong> jaisa —
+                        whatever you tell it, it will say it out loud on screen!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 1: Simple text print karo
+print("Hello, World!")
+print("Namaste Duniya!")
+print("Main Python seekh raha hoon!")</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-label">📤 Output:</div>
+                    Hello, World!<br>Namaste Duniya!<br>Main Python seekh raha hoon!
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 2: Numbers print karo
+print(42)
+print(3.14)
+print(100 + 200)
+
+# Example 3: Multiple values ek saath
+print("Meri age:", 20)
+print("Sum:", 10 + 5, "aur", "Diff:", 10 - 5)</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-label">📤 Output:</div>
+                    42<br>3.14<br>300<br>Meri age: 20<br>Sum: 15 aur Diff: 5
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 4: Special characters
+print("Line 1\nLine 2")     # \n = New line
+print("Tab\there")           # \t = Tab space
+print("He said \"Hello\"")   # \" = Quote inside string
+print('It\'s Python!')       # \' = Apostrophe</code></pre>
+                </div>
+
+                <h3>🔧 print() ke Parameters</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># sep parameter — separator change karo
+print("Python", "is", "awesome", sep="-")
+# Output: Python-is-awesome
+
+print("A", "B", "C", sep=" ❤️ ")
+# Output: A ❤️ B ❤️ C
+
+# end parameter — line end change karo
+print("Hello", end=" ")
+print("World!")
+# Output: Hello World! (ek hi line mein)</code></pre>
+                </div>
+
+                <h3>🎨 Comments — Code ko Explain Karo</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Single line comment — # se shuru hota hai
+print("Hello")  # Ye bhi comment hai, code ke baad
+
+"""
+Multi-line comment (Docstring)
+Ye multiple lines mein
+comment likh sakte ho
+"""
+
+# Comments Python ignore karta hai — sirf humari samajh ke liye hain!</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 4: Variables & Data Types -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">4</span>
+                <h2>Variables & Data Types 📦</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📦 Variables Kya Hain?</h3>
+                <p>Variable ek <strong>container</strong> hai jismein hum data store karte hain. Jaise ek
+                    <strong>dabba</strong> jismein cheezein rakhte hain!</p>
+
+                <div class="info-box hinglish">
+                    <span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Variable = <strong>Label wala dabba</strong>. Jaise kitchen mein
+                        "Sugar" likha dabba sugar store karta hai, waise <code>name = "Himanshu"</code> mein
+                        <code>name</code> dabba "Himanshu" store karta hai!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Variables banana — koi special keyword nahi chahiye!
+name = "Himanshu"        # String (text)
+age = 20                 # Integer (whole number)
+height = 5.8             # Float (decimal number)
+is_student = True        # Boolean (True/False)
+
+print(name)       # Himanshu
+print(age)        # 20
+print(height)     # 5.8
+print(is_student) # True</code></pre>
+                </div>
+
+                <h3>📊 Data Types in Python</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>int</code></td>
+                            <td>Whole numbers</td>
+                            <td><code>42, -10, 0</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>float</code></td>
+                            <td>Decimal numbers</td>
+                            <td><code>3.14, -0.5, 2.0</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>str</code></td>
+                            <td>Text/String</td>
+                            <td><code>"Hello", 'Python'</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>bool</code></td>
+                            <td>True or False</td>
+                            <td><code>True, False</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>NoneType</code></td>
+                            <td>No value</td>
+                            <td><code>None</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># type() function — data type check karo
+print(type(42))         # &lt;class 'int'&gt;
+print(type(3.14))       # &lt;class 'float'&gt;
+print(type("Hello"))    # &lt;class 'str'&gt;
+print(type(True))       # &lt;class 'bool'&gt;
+print(type(None))       # &lt;class 'NoneType'&gt;
+
+# Multiple assignment — ek line mein multiple variables!
+a, b, c = 10, 20, 30
+print(a, b, c)   # 10 20 30
+
+# Same value multiple variables ko
+x = y = z = 100
+print(x, y, z)   # 100 100 100</code></pre>
+                </div>
+
+                <h3>🔄 Type Conversion (Typecasting)</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># String ko Integer mein convert karo
+num_str = "42"
+num_int = int(num_str)
+print(num_int + 8)    # 50
+
+# Integer ko String mein
+age = 20
+msg = "I am " + str(age) + " years old"
+print(msg)  # I am 20 years old
+
+# Float conversions
+print(int(3.7))       # 3 (decimal cut ho jaata hai)
+print(float(5))       # 5.0
+print(str(3.14))      # "3.14"
+
+# Bool conversions
+print(bool(0))        # False
+print(bool(1))        # True
+print(bool(""))       # False (empty string)
+print(bool("Hello"))  # True (non-empty string)</code></pre>
+                </div>
+
+                <h3>📏 Variable Naming Rules</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># ✅ Valid names
+my_name = "Himanshu"
+age2 = 20
+_private = "secret"
+CONSTANT = 3.14
+
+# ❌ Invalid names — ye ERROR denge!
+# 2name = "wrong"      # Number se start nahi ho sakta
+# my-name = "wrong"    # Hyphen allowed nahi
+# my name = "wrong"    # Space allowed nahi
+# class = "wrong"      # Reserved keyword nahi use kar sakte</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> Apna name, age, aur city ek-ek variable mein store karo aur
+                            print karo. <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>name = "Himanshu"
+age = 20
+city = "Delhi"
+print(f"Name: {name}, Age: {age}, City: {city}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Do numbers ko variables mein store karo, unka sum, difference,
+                            product, aur division print karo. <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>a = 15
+b = 4
+print("Sum:", a + b)        # 19
+print("Difference:", a - b) # 11
+print("Product:", a * b)    # 60
+print("Division:", a / b)   # 3.75</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q3.</span> <code>type()</code> use karke different values ka data type
+                            print karo. <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>print(type(10))         # int
+print(type(3.14))       # float
+print(type("Python"))   # str
+print(type(True))       # bool
+print(type([1, 2, 3]))  # list</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 5: Input/Output -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">5</span>
+                <h2>Input & Output ⌨️</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>⌨️ input() Function — User se Data Lo</h3>
+                <p><code>input()</code> function user se keyboard se data leta hai. Ye <strong>hamesha string</strong>
+                    return karta hai!</p>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Basic input
+name = input("Apna naam likho: ")
+print("Hello,", name, "! Welcome to PyMaster!")
+
+# Number input — int() ya float() se convert karo
+age = int(input("Apni age batao: "))
+print("Tum", age, "saal ke ho!")
+
+# Multiple values
+num1 = float(input("First number: "))
+num2 = float(input("Second number: "))
+print("Sum =", num1 + num2)</code></pre>
+                </div>
+
+                <h3>✨ f-Strings — Best Way to Format Output</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>name = "Himanshu"
+age = 20
+cgpa = 8.75
+
+# f-string (Python 3.6+) — Sabse best method!
+print(f"Mera naam {name} hai")
+print(f"Age: {age}, CGPA: {cgpa}")
+print(f"5 saal baad main {age + 5} ka hounga!")
+print(f"CGPA formatted: {cgpa:.1f}")  # 8.8 (1 decimal)
+
+# Expressions bhi likh sakte ho!
+print(f"10 + 20 = {10 + 20}")
+print(f"Name uppercase: {name.upper()}")</code></pre>
+                </div>
+
+                <h3>📋 Other Formatting Methods</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Method 1: .format()
+print("Name: {}, Age: {}".format("Himanshu", 20))
+print("Name: {0}, Age: {1}".format("Himanshu", 20))
+
+# Method 2: % formatting (old style)
+print("Name: %s, Age: %d" % ("Himanshu", 20))
+
+# Method 3: String concatenation
+print("Name: " + "Himanshu" + ", Age: " + str(20))</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> User se naam aur age lo aur f-string se greeting print karo.
+                            <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>name = input("Your name: ")
+age = int(input("Your age: "))
+print(f"Hello {name}! You are {age} years old.")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Temperature Celsius mein lo aur Fahrenheit mein convert karke
+                            dikhao. <span class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>celsius = float(input("Temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius}°C = {fahrenheit:.2f}°F")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 6: Operators -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">6</span>
+                <h2>Operators ➕➖✖️➗</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🔢 Arithmetic Operators</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>a, b = 17, 5
+print(f"Add: {a + b}")       # 22
+print(f"Subtract: {a - b}")  # 12
+print(f"Multiply: {a * b}")  # 85
+print(f"Divide: {a / b}")    # 3.4  (float division)
+print(f"Floor Div: {a // b}")# 3    (integer division)
+print(f"Modulus: {a % b}")   # 2    (remainder)
+print(f"Power: {a ** b}")    # 1419857  (17^5)</code></pre>
+                </div>
+
+                <h3>🔍 Comparison Operators</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>x, y = 10, 20
+print(x == y)   # False — Equal?
+print(x != y)   # True  — Not Equal?
+print(x > y)    # False — Greater?
+print(x < y)    # True  — Less than?
+print(x >= 10)  # True  — Greater or equal?
+print(x <= 5)   # False — Less or equal?</code></pre>
+                </div>
+
+                <h3>🧠 Logical Operators</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>age = 20
+has_id = True
+
+# and — DONO conditions true honi chahiye
+print(age >= 18 and has_id)     # True
+
+# or — KOI EK condition true ho to kaafi
+print(age >= 21 or has_id)      # True
+
+# not — Ulta kar deta hai
+print(not has_id)               # False
+print(not (age < 18))           # True</code></pre>
+                </div>
+
+                <h3>📝 Assignment Operators</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>x = 10
+x += 5    # x = x + 5 → 15
+x -= 3    # x = x - 3 → 12
+x *= 2    # x = x * 2 → 24
+x /= 4    # x = x / 4 → 6.0
+x //= 2   # x = x // 2 → 3.0
+x **= 3   # x = x ** 3 → 27.0
+print(x)  # 27.0</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> User se 2 numbers lo aur sab arithmetic operations ka result
+                            dikhao. <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>a = float(input("Number 1: "))
+b = float(input("Number 2: "))
+print(f"Sum: {a+b}, Diff: {a-b}, Product: {a*b}, Div: {a/b}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Check karo ki ek number even hai ya odd (modulus operator use
+                            karo). <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>num = int(input("Enter number: "))
+print(f"{num} is {'Even' if num % 2 == 0 else 'Odd'}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 7: Conditionals -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">7</span>
+                <h2>Conditional Statements 🔀</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🤔 Decisions Lena Seekho!</h3>
+                <p>Jaise real life mein hum decisions lete hain — "Agar baarish ho rahi hai to chhata le lo", waise
+                    Python mein <code>if/elif/else</code> se decisions lete hain.</p>
+
+                <div class="info-box hinglish">
+                    <span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Traffic light socho — <strong>Red = Ruko (if)</strong>,
+                        <strong>Yellow = Ready ho jao (elif)</strong>, <strong>Green = Chalo (else)</strong>!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 1: Simple if/else
+age = 20
+if age >= 18:
+    print("Tum adult ho! ✅")
+else:
+    print("Tum abhi minor ho! ❌")
+
+# Example 2: if/elif/else — Multiple conditions
+marks = 85
+if marks >= 90:
+    print("Grade: A+ 🌟")
+elif marks >= 80:
+    print("Grade: A 🎉")
+elif marks >= 70:
+    print("Grade: B 👍")
+elif marks >= 60:
+    print("Grade: C 😊")
+else:
+    print("Grade: F 😢 — Aur mehnat karo!")
+# Output: Grade: A 🎉</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 3: Nested if
+age = 25
+has_license = True
+
+if age >= 18:
+    if has_license:
+        print("Tum gaadi chala sakte ho! 🚗")
+    else:
+        print("Pehle license banwao! 📝")
+else:
+    print("18 saal ke hone tak ruko! ⏳")
+
+# Example 4: Logical operators ke saath
+username = "admin"
+password = "1234"
+
+if username == "admin" and password == "1234":
+    print("Login successful! ✅")
+else:
+    print("Wrong credentials! ❌")
+
+# Example 5: Ternary operator (one-liner)
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(f"Status: {status}")  # Adult</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> User se number lo aur batao positive, negative, ya zero hai.
+                            <span class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>num = float(input("Enter number: "))
+if num > 0:
+    print("Positive ➕")
+elif num < 0:
+    print("Negative ➖")
+else:
+    print("Zero 0️⃣")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Grading system banao: 90+ = A+, 80+ = A, 70+ = B, 60+ = C,
+                            else F. <span class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>marks = int(input("Enter marks: "))
+if marks >= 90: grade = "A+"
+elif marks >= 80: grade = "A"
+elif marks >= 70: grade = "B"
+elif marks >= 60: grade = "C"
+else: grade = "F"
+print(f"Grade: {grade}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q3.</span> Leap year checker banao. <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>year = int(input("Enter year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year! 🎉")
+else:
+    print(f"{year} is NOT a Leap Year")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 8: Loops -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">8</span>
+                <h2>Loops — for & while 🔄</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🔄 Loops Kya Hain?</h3>
+                <p>Loops se hum ek kaam baar baar kar sakte hain — bina har baar likhein!</p>
+
+                <div class="info-box hinglish">
+                    <span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Socho tumhe 100 baar "I love Python" likhna hai. Kya tum 100 baar
+                        <code>print()</code> likhoge? Nahi! Loop use karo — ek line mein kaam ho jayega!</div>
+                </div>
+
+                <h3>🔁 for Loop</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 1: range() ke saath
+for i in range(5):
+    print(f"Count: {i}")
+# 0, 1, 2, 3, 4
+
+# Example 2: List iterate karo
+fruits = ["Apple", "Banana", "Mango", "Orange"]
+for fruit in fruits:
+    print(f"I like {fruit}! 🍎")
+
+# Example 3: range(start, stop, step)
+for i in range(2, 11, 2):
+    print(i, end=" ")  # 2 4 6 8 10
+
+# Example 4: String iterate
+for char in "Python":
+    print(char, end="-")  # P-y-t-h-o-n-</code></pre>
+                </div>
+
+                <h3>🔄 while Loop</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Example 1: Simple countdown
+count = 5
+while count > 0:
+    print(f"⏳ {count}...")
+    count -= 1
+print("🚀 Launch!")
+
+# Example 2: User input loop
+while True:
+    answer = input("Quit karna hai? (yes/no): ")
+    if answer.lower() == "yes":
+        print("Bye! 👋")
+        break
+
+# Example 3: Sum of numbers
+total = 0
+num = 1
+while num <= 10:
+    total += num
+    num += 1
+print(f"Sum of 1-10: {total}")  # 55</code></pre>
+                </div>
+
+                <h3>⚡ break, continue, pass</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># break — Loop se bahar niklo
+for i in range(10):
+    if i == 5:
+        break   # 5 pe ruk jao
+    print(i)    # 0 1 2 3 4
+
+# continue — Current iteration skip karo
+for i in range(6):
+    if i == 3:
+        continue  # 3 skip karo
+    print(i)      # 0 1 2 4 5
+
+# pass — Kuch mat karo (placeholder)
+for i in range(3):
+    pass  # Baad mein code likhenge</code></pre>
+                </div>
+
+                <h3>🔲 Nested Loops — Patterns Banao!</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Star Triangle Pattern
+for i in range(1, 6):
+    print("⭐" * i)
+# ⭐
+# ⭐⭐
+# ⭐⭐⭐
+# ⭐⭐⭐⭐
+# ⭐⭐⭐⭐⭐
+
+# Multiplication Table
+num = 5
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> 1 se 50 tak ke sab even numbers print karo. <span
+                                class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>for i in range(2, 51, 2):
+    print(i, end=" ")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Factorial calculator banao (e.g., 5! = 120). <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>n = int(input("Enter number: "))
+fact = 1
+for i in range(1, n + 1):
+    fact *= i
+print(f"{n}! = {fact}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q3.</span> Fibonacci series print karo (first 10 numbers). <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>a, b = 0, 1
+for _ in range(10):
+    print(a, end=" ")
+    a, b = b, a + b
+# 0 1 1 2 3 5 8 13 21 34</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q4.</span> Star pyramid pattern banao (5 rows). <span
+                                class="difficulty hard">Hard</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>n = 5
+for i in range(1, n + 1):
+    print(" " * (n - i) + "⭐" * (2*i - 1))</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 9: Strings -->
+        <div class="lesson">
+            <div class="lesson-header">
+                <span class="lesson-num">9</span>
+                <h2>Strings Deep Dive 🔤</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📝 String Kya Hai?</h3>
+                <p>String characters ka sequence hai — text data store karne ke liye use hota hai.</p>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># String Slicing — Parts nikalo
+text = "Python Master"
+print(text[0])      # P (pehla character)
+print(text[-1])     # r (aakhri character)
+print(text[0:6])    # Python
+print(text[7:])     # Master
+print(text[::-1])   # retsaM nohtyP (reverse!)
+
+# String Methods
+msg = "  Hello Python World!  "
+print(msg.strip())        # Spaces hatao
+print(msg.lower())        # sab lowercase
+print(msg.upper())        # SAB UPPERCASE
+print(msg.title())        # Har Word Capital
+print(msg.replace("Python", "Java"))
+print(msg.split())        # List mein todo
+print("Python" in msg)    # True — check karo
+print(msg.count("l"))     # 2 — kitni baar aaya
+print(msg.find("Python")) # 8 — kahan mila
+print(msg.startswith(" ")) # True
+print("-".join(["A","B","C"]))  # A-B-C</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice Problems</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> User se string lo aur reverse karke dikhao. <span
+                                class="difficulty easy">Easy</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>text = input("Enter string: ")
+print(f"Reversed: {text[::-1]}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Check karo ki string palindrome hai ya nahi (e.g., "madam").
+                            <span class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>text = input("Enter string: ").lower()
+if text == text[::-1]:
+    print(f"'{text}' is a Palindrome! ✅")
+else:
+    print(f"'{text}' is NOT a Palindrome ❌")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q3.</span> String mein vowels count karo. <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>text = input("Enter string: ").lower()
+count = sum(1 for c in text if c in "aeiou")
+print(f"Vowels: {count}")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="intermediate.html" class="btn btn-accent" style="font-size:1.1rem; padding: 16px 40px;">⚡ Next:
+                Intermediate Level →</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

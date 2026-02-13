@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PyMaster Resources - Python cheat sheets, interview questions, recommended books and tools.">
+    <title>Resources - PyMaster 📝</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>📝 Resources</h1>
+        <p>Cheat sheets, interview questions, aur recommended tools — sab ek jagah!</p>
+    </section>
+
+    <div class="container" style="padding-top:40px;padding-bottom:80px;">
+
+        <!-- CHEAT SHEETS -->
+        <div class="section-header reveal" id="cheatsheets">
+            <span class="badge">Quick Reference</span>
+            <h2>📋 Python Cheat Sheets</h2>
+            <p>Quick reference cards — jab bhi zaroorat ho, yahan dekh lo!</p>
+        </div>
+
+        <!-- Syntax Cheat Sheet -->
+        <div class="lesson open reveal">
+            <div class="lesson-header"><span class="lesson-num">📝</span>
+                <h2>Python Syntax Cheat Sheet</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Concept</th>
+                            <th>Syntax</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Print</td>
+                            <td><code>print()</code></td>
+                            <td><code>print("Hello")</code></td>
+                        </tr>
+                        <tr>
+                            <td>Input</td>
+                            <td><code>input()</code></td>
+                            <td><code>name = input("Name: ")</code></td>
+                        </tr>
+                        <tr>
+                            <td>Variable</td>
+                            <td><code>name = value</code></td>
+                            <td><code>age = 20</code></td>
+                        </tr>
+                        <tr>
+                            <td>f-String</td>
+                            <td><code>f"text {var}"</code></td>
+                            <td><code>f"Age: {age}"</code></td>
+                        </tr>
+                        <tr>
+                            <td>If/Else</td>
+                            <td><code>if: elif: else:</code></td>
+                            <td><code>if x>0: print("+")</code></td>
+                        </tr>
+                        <tr>
+                            <td>For Loop</td>
+                            <td><code>for i in range():</code></td>
+                            <td><code>for i in range(5):</code></td>
+                        </tr>
+                        <tr>
+                            <td>While Loop</td>
+                            <td><code>while condition:</code></td>
+                            <td><code>while x>0: x-=1</code></td>
+                        </tr>
+                        <tr>
+                            <td>Function</td>
+                            <td><code>def name():</code></td>
+                            <td><code>def add(a,b): return a+b</code></td>
+                        </tr>
+                        <tr>
+                            <td>List</td>
+                            <td><code>[item1, item2]</code></td>
+                            <td><code>nums = [1,2,3]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Dictionary</td>
+                            <td><code>{key: value}</code></td>
+                            <td><code>d = {"a": 1}</code></td>
+                        </tr>
+                        <tr>
+                            <td>Tuple</td>
+                            <td><code>(item1, item2)</code></td>
+                            <td><code>t = (1,2,3)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Set</td>
+                            <td><code>{item1, item2}</code></td>
+                            <td><code>s = {1,2,3}</code></td>
+                        </tr>
+                        <tr>
+                            <td>Class</td>
+                            <td><code>class Name:</code></td>
+                            <td><code>class Dog: pass</code></td>
+                        </tr>
+                        <tr>
+                            <td>Try/Except</td>
+                            <td><code>try: except:</code></td>
+                            <td><code>try: x=1/0</code></td>
+                        </tr>
+                        <tr>
+                            <td>Import</td>
+                            <td><code>import module</code></td>
+                            <td><code>import math</code></td>
+                        </tr>
+                        <tr>
+                            <td>Lambda</td>
+                            <td><code>lambda x: expr</code></td>
+                            <td><code>sq = lambda x: x**2</code></td>
+                        </tr>
+                        <tr>
+                            <td>List Comp</td>
+                            <td><code>[expr for x in list]</code></td>
+                            <td><code>[x**2 for x in range(5)]</code></td>
+                        </tr>
+                        <tr>
+                            <td>File Read</td>
+                            <td><code>with open() as f:</code></td>
+                            <td><code>with open("f.txt") as f:</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Data Structures Cheat Sheet -->
+        <div class="lesson reveal">
+            <div class="lesson-header"><span class="lesson-num">📊</span>
+                <h2>Data Structures Cheat Sheet</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📋 List Methods</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>lst = [3, 1, 4, 1, 5]
+lst.append(9)         # Add at end → [3,1,4,1,5,9]
+lst.insert(0, 2)      # Insert at index → [2,3,1,4,1,5,9]
+lst.remove(1)         # Remove first 1 → [2,3,4,1,5,9]
+lst.pop()             # Remove last → [2,3,4,1,5]
+lst.pop(0)            # Remove at index → [3,4,1,5]
+lst.sort()            # Sort → [1,3,4,5]
+lst.reverse()         # Reverse → [5,4,3,1]
+lst.index(3)          # Find index → 2
+lst.count(1)          # Count → 1
+len(lst)              # Length → 4
+lst.copy()            # Shallow copy
+lst.clear()           # Empty list</code></pre>
+                </div>
+
+                <h3>📖 Dictionary Methods</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>d = {"a": 1, "b": 2, "c": 3}
+d["d"] = 4              # Add/Update
+d.get("x", 0)           # Get with default → 0
+d.keys()                # All keys
+d.values()              # All values
+d.items()               # Key-value pairs
+d.pop("a")              # Remove key → 1
+d.update({"e": 5})      # Merge dict
+"b" in d                # Check key → True
+del d["c"]              # Delete key</code></pre>
+                </div>
+
+                <h3>🔤 String Methods</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>s = "Hello World"
+s.upper()           # "HELLO WORLD"
+s.lower()           # "hello world"
+s.title()           # "Hello World"
+s.strip()           # Remove spaces
+s.split()           # ["Hello", "World"]
+s.replace("o", "0") # "Hell0 W0rld"
+s.startswith("He")  # True
+s.endswith("ld")    # True
+s.find("World")     # 6
+s.count("l")        # 3
+s.isdigit()         # False
+s.isalpha()         # False (space)
+"-".join(["A","B"]) # "A-B"
+s[::-1]             # "dlroW olleH"</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERVIEW QUESTIONS -->
+        <div class="section-header reveal" style="margin-top:60px;" id="interview">
+            <span class="badge">Career</span>
+            <h2>❓ Top 25 Python Interview Questions</h2>
+            <p>Interviews mein puchhe jaane wale important questions with answers!</p>
+        </div>
+
+        <div class="practice-box reveal" style="border-color:var(--accent-secondary);">
+            <div class="practice-question">
+                <p><span class="q-num">Q1.</span> Python mein List aur Tuple mein kya difference hai?</p>
+                <div class="practice-answer">
+                    <p><strong>List:</strong> Mutable (change ho sakti), <code>[]</code> se banate hain.
+                        <strong>Tuple:</strong> Immutable (change nahi hoti), <code>()</code> se banate hain. Tuple
+                        faster hai aur dictionary key ban sakti hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q2.</span> Python mein <code>==</code> aur <code>is</code> mein kya fark hai?</p>
+                <div class="practice-answer">
+                    <p><code>==</code> <strong>value</strong> compare karta hai, <code>is</code> <strong>identity
+                            (memory location)</strong> compare karta hai. <code>a = [1,2]; b = [1,2]</code> →
+                        <code>a == b</code> is True, <code>a is b</code> is False.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q3.</span> <code>*args</code> aur <code>**kwargs</code> kya hain?</p>
+                <div class="practice-answer">
+                    <p><code>*args</code> = Multiple positional arguments (tuple mein aate hain). <code>**kwargs</code>
+                        = Multiple keyword arguments (dictionary mein aate hain).</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q4.</span> Python mein Decorator kya hota hai?</p>
+                <div class="practice-answer">
+                    <p>Decorator ek function hai jo dusre function ko modify karta hai bina uska code change kiye.
+                        <code>@decorator_name</code> syntax se use hota hai. Example: logging, timing, authentication.
+                    </p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q5.</span> Python mein GIL (Global Interpreter Lock) kya hai?</p>
+                <div class="practice-answer">
+                    <p>GIL ek mutex hai jo CPython mein ek time pe sirf ek thread ko Python bytecode execute karne deta
+                        hai. Isliye truly parallel CPU-bound tasks ke liye multiprocessing use karna padta hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q6.</span> List Comprehension kya hai?</p>
+                <div class="practice-answer">
+                    <p>List banana ka short way: <code>[expression for item in iterable if condition]</code>. Example:
+                        <code>[x**2 for x in range(10) if x%2==0]</code> = squares of even numbers.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q7.</span> Python mein shallow copy aur deep copy mein kya fark hai?</p>
+                <div class="practice-answer">
+                    <p><strong>Shallow copy:</strong> New object banata hai but nested objects share hote hain.
+                        <strong>Deep copy:</strong> Completely independent copy banata hai.
+                        <code>import copy; copy.deepcopy(obj)</code></p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q8.</span> <code>self</code> kya hai Python classes mein?</p>
+                <div class="practice-answer">
+                    <p><code>self</code> current object ka reference hai. Har method ka first parameter hota hai. Isse
+                        hum object ke attributes aur methods access karte hain.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q9.</span> Python mein Generator kya hai?</p>
+                <div class="practice-answer">
+                    <p>Generator ek function hai jo <code>yield</code> keyword use karta hai (return ki jagah). Ye lazy
+                        evaluation karta hai — values ek-ek karke generate hoti hain, sab ek saath memory mein load nahi
+                        hoti.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q10.</span> Python mein <code>__init__</code> method kya karta hai?</p>
+                <div class="practice-answer">
+                    <p><code>__init__</code> constructor hai — jab object create hota hai tab automatically call hota
+                        hai. Isme hum object ke initial attributes set karte hain.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q11.</span> Python mein mutable aur immutable types kya hain?</p>
+                <div class="practice-answer">
+                    <p><strong>Mutable:</strong> list, dict, set (change ho sakte). <strong>Immutable:</strong> int,
+                        float, str, tuple, frozenset (change nahi ho sakte).</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q12.</span> <code>map()</code>, <code>filter()</code>, <code>reduce()</code> kya
+                    hain?</p>
+                <div class="practice-answer">
+                    <p><code>map(fn, list)</code> = har element pe function lagao. <code>filter(fn, list)</code> =
+                        condition match karne wale elements nikalo. <code>reduce(fn, list)</code> = sab elements ko
+                        combine karo into single value.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q13.</span> Python mein <code>with</code> statement kya hai?</p>
+                <div class="practice-answer">
+                    <p><code>with</code> context manager hai — resources (files, connections) ko automatically clean up
+                        karta hai. <code>with open("file") as f:</code> — file automatically close ho jaati hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q14.</span> <code>__name__ == "__main__"</code> ka matlab kya hai?</p>
+                <div class="practice-answer">
+                    <p>Check karta hai ki file directly run ho rahi hai ya import ho rahi hai. Direct run pe
+                        <code>__name__</code> = <code>"__main__"</code>. Import pe module ka naam hota hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q15.</span> Python mein exception handling kaise karte hain?</p>
+                <div class="practice-answer">
+                    <p><code>try</code> = code jo error de sakta hai. <code>except</code> = error handle karo.
+                        <code>else</code> = no error toh ye chale. <code>finally</code> = hamesha chale (cleanup).
+                        <code>raise</code> = apni error throw karo.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q16.</span> <code>pass</code>, <code>continue</code>, <code>break</code> mein kya
+                    fark hai?</p>
+                <div class="practice-answer">
+                    <p><code>pass</code> = kuch nahi karo (placeholder). <code>continue</code> = current iteration skip
+                        karo, next pe jao. <code>break</code> = poora loop se bahar niklo.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q17.</span> Python mein inheritance kya hai?</p>
+                <div class="practice-answer">
+                    <p>Child class parent class ke properties aur methods inherit karti hai.
+                        <code>class Dog(Animal):</code> — Dog ko Animal ke sab methods mil jaate hain. Code reuse ka
+                        best tarika.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q18.</span> <code>staticmethod</code> aur <code>classmethod</code> mein kya fark
+                    hai?</p>
+                <div class="practice-answer">
+                    <p><code>@staticmethod</code> — class/instance se independent, no self/cls parameter.
+                        <code>@classmethod</code> — cls parameter leta hai, class ko modify kar sakta hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q19.</span> Python mein virtual environment kya hota hai?</p>
+                <div class="practice-answer">
+                    <p>Isolated Python environment — har project ke apne alag packages hote hain.
+                        <code>python -m venv myenv</code> se banate hain. Dependency conflicts avoid hote hain.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q20.</span> <code>pip</code> kya hai?</p>
+                <div class="practice-answer">
+                    <p><code>pip</code> = Python package manager. <code>pip install package_name</code> se packages
+                        install hote hain. <code>pip freeze > requirements.txt</code> se dependencies save hoti hain.
+                    </p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q21.</span> Python 2 vs Python 3 main differences?</p>
+                <div class="practice-answer">
+                    <p>Print: <code>print "hi"</code> (Py2) vs <code>print("hi")</code> (Py3). Division:
+                        <code>5/2=2</code> (Py2) vs <code>5/2=2.5</code> (Py3). Python 2 officially dead since 2020,
+                        always use Python 3.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q22.</span> <code>zip()</code> function kya karta hai?</p>
+                <div class="practice-answer">
+                    <p>Multiple iterables ko parallel mein combine karta hai. <code>zip([1,2,3], ['a','b','c'])</code> →
+                        <code>[(1,'a'), (2,'b'), (3,'c')]</code></p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q23.</span> Python mein <code>enumerate()</code> kya hai?</p>
+                <div class="practice-answer">
+                    <p>Loop mein index aur value dono deta hai. <code>for i, val in enumerate(["a","b","c"]):</code> →
+                        i=0,val="a" etc.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q24.</span> Abstract class kya hoti hai?</p>
+                <div class="practice-answer">
+                    <p>Abstract class ka object nahi ban sakta. <code>from abc import ABC, abstractmethod</code>. Child
+                        class ko abstract methods implement karne padte hain. Blueprint/contract jaisi hai.</p>
+                </div>
+            </div>
+            <div class="practice-question">
+                <p><span class="q-num">Q25.</span> Python mein memory management kaise hoti hai?</p>
+                <div class="practice-answer">
+                    <p>Python automatic <strong>garbage collection</strong> use karta hai (reference counting + cyclic
+                        garbage collector). Jab kisi object ka koi reference nahi raha, memory free ho jaati hai.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECOMMENDED RESOURCES -->
+        <div class="section-header reveal" style="margin-top:60px;" id="books">
+            <span class="badge">Learn More</span>
+            <h2>📚 Recommended Resources</h2>
+        </div>
+
+        <div class="features-grid reveal">
+            <div class="resource-card">
+                <div class="res-icon">📘</div>
+                <h3>Books</h3>
+                <ul style="list-style:none;color:var(--text-secondary);font-size:0.9rem;">
+                    <li>📖 Automate the Boring Stuff with Python</li>
+                    <li>📖 Python Crash Course (Eric Matthes)</li>
+                    <li>📖 Fluent Python (Luciano Ramalho)</li>
+                    <li>📖 Learning Python (Mark Lutz)</li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <div class="res-icon">🎥</div>
+                <h3>YouTube Channels</h3>
+                <ul style="list-style:none;color:var(--text-secondary);font-size:0.9rem;">
+                    <li>🎬 CodeWithHarry (Hindi)</li>
+                    <li>🎬 Corey Schafer</li>
+                    <li>🎬 Tech With Tim</li>
+                    <li>🎬 Programming with Mosh</li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <div class="res-icon">🌐</div>
+                <h3>Websites</h3>
+                <ul style="list-style:none;color:var(--text-secondary);font-size:0.9rem;">
+                    <li>🔗 <a href="https://docs.python.org">docs.python.org</a> (Official)</li>
+                    <li>🔗 <a href="https://realpython.com">realpython.com</a></li>
+                    <li>🔗 <a href="https://w3schools.com/python">w3schools.com</a></li>
+                    <li>🔗 <a href="https://hackerrank.com">hackerrank.com</a> (Practice)</li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <div class="res-icon">🛠️</div>
+                <h3>Tools</h3>
+                <ul style="list-style:none;color:var(--text-secondary);font-size:0.9rem;">
+                    <li>⚡ VS Code + Python Extension</li>
+                    <li>⚡ PyCharm Community Edition</li>
+                    <li>⚡ Jupyter Notebook</li>
+                    <li>⚡ Google Colab (Free GPU!)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

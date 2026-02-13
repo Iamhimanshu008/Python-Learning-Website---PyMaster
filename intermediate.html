@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PyMaster Intermediate Level - Functions, OOP, Data Structures, File Handling with detailed examples.">
+    <title>Intermediate Level - PyMaster ⚡</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner</a></li>
+                <li><a href="intermediate.html" class="active">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>⚡ Intermediate Level</h1>
+        <p>Ab real Python power seekho — Functions, OOP, Data Structures aur bahut kuch!</p>
+    </section>
+
+    <div class="container-narrow" style="padding-top:40px;padding-bottom:80px;">
+
+        <!-- LESSON 1: Functions -->
+        <div class="lesson open">
+            <div class="lesson-header"><span class="lesson-num">1</span>
+                <h2>Functions & Scope 🔧</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🔧 Function Kya Hai?</h3>
+                <p>Function ek <strong>reusable code block</strong> hai — ek baar likho, baar baar use karo!</p>
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Function ek <strong>recipe</strong> jaisa hai — ek baar recipe likh
+                        lo, fir jab chahein woh dish bana lo!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Basic function
+def greet(name):
+    """Ye function greeting print karta hai"""
+    print(f"Hello, {name}! Welcome! 🎉")
+
+greet("Himanshu")  # Hello, Himanshu! Welcome! 🎉
+greet("Python")    # Hello, Python! Welcome! 🎉
+
+# Return value
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(f"Sum: {result}")  # Sum: 30
+
+# Default parameters
+def power(base, exp=2):
+    return base ** exp
+
+print(power(5))      # 25 (default exp=2)
+print(power(2, 10))  # 1024</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># *args — Multiple arguments
+def total(*numbers):
+    return sum(numbers)
+
+print(total(1, 2, 3, 4, 5))  # 15
+
+# **kwargs — Keyword arguments
+def profile(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+profile(name="Himanshu", age=20, city="Delhi")
+
+# Lambda function — One-liner function
+square = lambda x: x ** 2
+print(square(5))  # 25
+
+# Scope — Local vs Global
+x = 100  # Global
+
+def demo():
+    x = 50  # Local — sirf function ke andar
+    print(f"Inside: {x}")  # 50
+
+demo()
+print(f"Outside: {x}")  # 100</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> Factorial calculate karne wala function banao. <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>def factorial(n):
+    if n <= 1: return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # 120</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> Function banao jo check kare number prime hai ya nahi. <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>def is_prime(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+for num in range(1, 20):
+    if is_prime(num): print(num, end=" ")
+# 2 3 5 7 11 13 17 19</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 2: Lists -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">2</span>
+                <h2>Lists 📋</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📋 List Kya Hai?</h3>
+                <p>List ek <strong>ordered, mutable collection</strong> hai — multiple items ek jagah store karo!</p>
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> List ek <strong>shopping list</strong> jaisi hai — items add karo,
+                        hatao, order change karo!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Creating lists
+fruits = ["Apple", "Banana", "Mango", "Orange"]
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "Hello", 3.14, True]
+
+# Accessing elements
+print(fruits[0])    # Apple
+print(fruits[-1])   # Orange
+print(fruits[1:3])  # ['Banana', 'Mango']
+
+# List methods
+fruits.append("Grapes")       # Add at end
+fruits.insert(1, "Kiwi")      # Add at index
+fruits.remove("Banana")       # Remove by value
+popped = fruits.pop()         # Remove last
+fruits.sort()                 # Sort
+fruits.reverse()              # Reverse
+print(len(fruits))            # Length
+print("Mango" in fruits)     # True — check membership
+
+# List Comprehension — One-liner loop!
+squares = [x**2 for x in range(1, 11)]
+print(squares)  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+evens = [x for x in range(20) if x % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> List se second largest number find karo. <span
+                                class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>nums = [45, 12, 78, 34, 90, 23]
+unique = list(set(nums))
+unique.sort()
+print(f"Second largest: {unique[-2]}")  # 78</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q2.</span> List comprehension se 1-50 mein sab prime numbers nikalo.
+                            <span class="difficulty hard">Hard</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>primes = [n for n in range(2, 51)
+          if all(n % i != 0 for i in range(2, int(n**0.5)+1))]
+print(primes)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 3: Tuples & Sets -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">3</span>
+                <h2>Tuples & Sets 📦</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📦 Tuple — Immutable List</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Tuple — change nahi ho sakta!
+colors = ("Red", "Green", "Blue")
+print(colors[0])    # Red
+print(len(colors))  # 3
+
+# Tuple unpacking
+x, y, z = colors
+print(x, y, z)  # Red Green Blue
+
+# Single element tuple — comma zaroor lagao!
+single = (42,)  # ✅ Tuple
+not_tuple = (42)  # ❌ Just an integer
+
+# Tuple as dictionary key (list nahi ho sakti key!)
+locations = {(28.6, 77.2): "Delhi", (19.0, 72.8): "Mumbai"}</code></pre>
+                </div>
+
+                <h3>🎯 Set — Unique Elements Only</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Set — duplicates automatically remove!
+nums = {1, 2, 3, 3, 4, 4, 5}
+print(nums)  # {1, 2, 3, 4, 5}
+
+# Set operations
+a = {1, 2, 3, 4, 5}
+b = {4, 5, 6, 7, 8}
+
+print(a | b)   # Union: {1,2,3,4,5,6,7,8}
+print(a & b)   # Intersection: {4, 5}
+print(a - b)   # Difference: {1, 2, 3}
+print(a ^ b)   # Symmetric diff: {1,2,3,6,7,8}
+
+# Remove duplicates from list — Set trick!
+my_list = [1, 2, 2, 3, 3, 3, 4]
+unique = list(set(my_list))
+print(unique)  # [1, 2, 3, 4]</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 4: Dictionaries -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">4</span>
+                <h2>Dictionaries 📖</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>📖 Dictionary — Key-Value Pairs</h3>
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Dictionary bilkul <strong>real dictionary</strong> jaisa hai — word
+                        (key) dalo, meaning (value) milta hai!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Creating dictionary
+student = {
+    "name": "Himanshu",
+    "age": 20,
+    "course": "B.Tech",
+    "cgpa": 8.5,
+    "skills": ["Python", "JavaScript", "SQL"]
+}
+
+# Access values
+print(student["name"])        # Himanshu
+print(student.get("age"))     # 20
+print(student.get("phone", "Not found"))  # Not found
+
+# Add/Update
+student["city"] = "Delhi"       # Add new
+student["age"] = 21             # Update
+student.update({"phone": "9999999999"})
+
+# Loop through dictionary
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# Dictionary Comprehension
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  # {1:1, 2:4, 3:9, 4:16, 5:25}
+
+# Nested Dictionary
+students = {
+    "student1": {"name": "Rahul", "marks": 85},
+    "student2": {"name": "Priya", "marks": 92},
+}
+print(students["student2"]["name"])  # Priya</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> String mein har character kitni baar aaya, dictionary se count
+                            karo. <span class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>text = "hello world"
+freq = {}
+for char in text:
+    freq[char] = freq.get(char, 0) + 1
+print(freq)  # {'h':1,'e':1,'l':3,'o':2,' ':1,'w':1,'r':1,'d':1}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 5: File Handling -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">5</span>
+                <h2>File Handling 📂</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Writing to a file
+with open("notes.txt", "w") as f:
+    f.write("Hello from PyMaster!\n")
+    f.write("Python is awesome! 🐍\n")
+
+# Reading a file
+with open("notes.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+# Append to file
+with open("notes.txt", "a") as f:
+    f.write("New line added!\n")
+
+# Read line by line
+with open("notes.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+# Working with CSV
+import csv
+with open("data.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Age", "City"])
+    writer.writerow(["Himanshu", 20, "Delhi"])
+
+# Working with JSON
+import json
+data = {"name": "Himanshu", "skills": ["Python", "JS"]}
+with open("data.json", "w") as f:
+    json.dump(data, f, indent=2)
+
+with open("data.json", "r") as f:
+    loaded = json.load(f)
+    print(loaded["name"])  # Himanshu</code></pre>
+                </div>
+
+                <div class="info-box tip"><span class="icon">✅</span>
+                    <div><strong>Always use <code>with</code> statement!</strong> Ye file ko automatically close karta
+                        hai — memory leak nahi hogi.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 6: Exception Handling -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">6</span>
+                <h2>Exception Handling ⚠️</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Exception handling ek <strong>safety net</strong> jaisa hai — agar
+                        tightrope pe se giro to net pakad lega, program crash nahi hoga!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Basic try/except
+try:
+    num = int(input("Enter number: "))
+    result = 100 / num
+    print(f"Result: {result}")
+except ValueError:
+    print("❌ Please enter a valid number!")
+except ZeroDivisionError:
+    print("❌ Cannot divide by zero!")
+except Exception as e:
+    print(f"❌ Error: {e}")
+else:
+    print("✅ No errors occurred!")
+finally:
+    print("🔄 This always runs!")
+
+# Custom Exception
+class AgeError(Exception):
+    pass
+
+def check_age(age):
+    if age < 0:
+        raise AgeError("Age cannot be negative!")
+    if age > 150:
+        raise AgeError("Age seems unrealistic!")
+    print(f"Age {age} is valid ✅")
+
+try:
+    check_age(-5)
+except AgeError as e:
+    print(f"Error: {e}")</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> Calculator banao jo divide by zero aur invalid input handle
+                            kare. <span class="difficulty medium">Medium</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>try:
+    a = float(input("Number 1: "))
+    b = float(input("Number 2: "))
+    op = input("Operation (+,-,*,/): ")
+    if op == '+': print(a + b)
+    elif op == '-': print(a - b)
+    elif op == '*': print(a * b)
+    elif op == '/': print(a / b)
+except ZeroDivisionError: print("Cannot divide by zero!")
+except ValueError: print("Invalid number!")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LESSON 7: OOP -->
+        <div class="lesson">
+            <div class="lesson-header"><span class="lesson-num">7</span>
+                <h2>OOP — Classes & Objects 🏗️</h2><span class="toggle-icon">▼</span>
+            </div>
+            <div class="lesson-body">
+                <h3>🏗️ OOP Kya Hai?</h3>
+                <p>OOP mein hum real-world cheezein code mein represent karte hain using <strong>Classes</strong>
+                    (blueprint) aur <strong>Objects</strong> (actual thing).</p>
+                <div class="info-box hinglish"><span class="icon">💡</span>
+                    <div><strong>Analogy:</strong> Class = <strong>House ka blueprint</strong>, Object = <strong>Actual
+                            ghar</strong> jo us blueprint se bana!</div>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code># Class define karo
+class Student:
+    def __init__(self, name, age, course):
+        self.name = name
+        self.age = age
+        self.course = course
+
+    def introduce(self):
+        print(f"Hi! I'm {self.name}, {self.age} yrs, studying {self.course}")
+
+    def is_adult(self):
+        return self.age >= 18
+
+# Objects banao
+s1 = Student("Himanshu", 20, "B.Tech")
+s2 = Student("Priya", 17, "12th")
+
+s1.introduce()  # Hi! I'm Himanshu, 20 yrs, studying B.Tech
+print(s1.is_adult())  # True
+print(s2.is_adult())  # False</code></pre>
+                </div>
+
+                <h3>🧬 Inheritance — Parent se properties le lo!</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Python</span><button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return "..."
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says: Woof! 🐕"
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says: Meow! 🐱"
+
+# Polymorphism — same method, different behavior!
+animals = [Dog("Buddy"), Cat("Whiskers"), Dog("Max")]
+for animal in animals:
+    print(animal.speak())
+# Buddy says: Woof! 🐕
+# Whiskers says: Meow! 🐱
+# Max says: Woof! 🐕</code></pre>
+                </div>
+
+                <div class="practice-box">
+                    <h3>🧩 Practice</h3>
+                    <div class="practice-question">
+                        <p><span class="q-num">Q1.</span> BankAccount class banao with deposit, withdraw, aur balance
+                            check. <span class="difficulty hard">Hard</span></p>
+                        <div class="practice-answer">
+                            <div class="code-block">
+                                <div class="code-header"><span class="code-lang">Python</span><button
+                                        class="copy-btn">Copy</button></div>
+                                <pre><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ₹{amount}. Balance: ₹{self.balance}")
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds! ❌")
+        else:
+            self.balance -= amount
+            print(f"Withdrew ₹{amount}. Balance: ₹{self.balance}")
+
+acc = BankAccount("Himanshu", 1000)
+acc.deposit(500)   # Balance: ₹1500
+acc.withdraw(200)  # Balance: ₹1300</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="advanced.html" class="btn btn-accent" style="font-size:1.1rem;padding:16px 40px;">🔥 Next: Advanced
+                Level →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

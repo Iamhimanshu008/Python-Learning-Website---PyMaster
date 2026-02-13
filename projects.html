@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PyMaster Projects - Build real Python projects from Calculator to ML apps.">
+    <title>Projects - PyMaster 🚀</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand"><span class="logo-icon">🐍</span><span>PyMaster</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beginner.html">Beginner</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>🚀 Python Projects</h1>
+        <p>Real-world projects build karo — seekhne ka sabse best tarika!</p>
+    </section>
+
+    <div class="container" style="padding-top:40px;padding-bottom:80px;">
+
+        <!-- TABS -->
+        <div class="tabs reveal">
+            <button class="tab-btn active" data-tab="proj-beginner">🌱 Beginner</button>
+            <button class="tab-btn" data-tab="proj-intermediate">⚡ Intermediate</button>
+            <button class="tab-btn" data-tab="proj-advanced">🔥 Advanced</button>
+        </div>
+
+        <!-- BEGINNER PROJECTS -->
+        <div id="proj-beginner" class="tab-content active">
+            <div class="topic-grid">
+                <div class="project-card reveal">
+                    <div class="project-img beginner-bg">🧮</div>
+                    <div class="project-body">
+                        <span class="project-level beginner">Beginner</span>
+                        <h3>Simple Calculator</h3>
+                        <p>Add, subtract, multiply, divide — user se input lo aur result dikhao</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img beginner-bg">🎲</div>
+                    <div class="project-body">
+                        <span class="project-level beginner">Beginner</span>
+                        <h3>Number Guessing Game</h3>
+                        <p>Computer ek random number choose karega, tumhe guess karna hai!</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img beginner-bg">❓</div>
+                    <div class="project-body">
+                        <span class="project-level beginner">Beginner</span>
+                        <h3>Quiz App</h3>
+                        <p>Multiple choice quiz — score track karo aur result dikhao</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img beginner-bg">🔐</div>
+                    <div class="project-body">
+                        <span class="project-level beginner">Beginner</span>
+                        <h3>Password Generator</h3>
+                        <p>Random strong passwords generate karo with custom length</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Detail: Calculator -->
+            <div class="lesson open" style="margin-top:40px;">
+                <div class="lesson-header"><span class="lesson-num">🧮</span>
+                    <h2>Project: Simple Calculator</h2><span class="toggle-icon">▼</span>
+                </div>
+                <div class="lesson-body">
+                    <div class="code-block">
+                        <div class="code-header"><span class="code-lang">Python</span><button
+                                class="copy-btn">Copy</button></div>
+                        <pre><code># 🧮 Simple Calculator
+def calculator():
+    print("=" * 30)
+    print("🧮 PyMaster Calculator")
+    print("=" * 30)
+
+    while True:
+        print("\nOptions: +  -  *  /  **  %  quit")
+        op = input("Operation: ").strip()
+        if op == "quit":
+            print("Bye! 👋"); break
+
+        try:
+            a = float(input("Number 1: "))
+            b = float(input("Number 2: "))
+
+            if op == "+": result = a + b
+            elif op == "-": result = a - b
+            elif op == "*": result = a * b
+            elif op == "/":
+                if b == 0:
+                    print("❌ Cannot divide by zero!"); continue
+                result = a / b
+            elif op == "**": result = a ** b
+            elif op == "%": result = a % b
+            else:
+                print("❌ Invalid operation!"); continue
+
+            print(f"✅ {a} {op} {b} = {result}")
+        except ValueError:
+            print("❌ Please enter valid numbers!")
+
+calculator()</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Detail: Number Guessing -->
+            <div class="lesson" style="margin-top:16px;">
+                <div class="lesson-header"><span class="lesson-num">🎲</span>
+                    <h2>Project: Number Guessing Game</h2><span class="toggle-icon">▼</span>
+                </div>
+                <div class="lesson-body">
+                    <div class="code-block">
+                        <div class="code-header"><span class="code-lang">Python</span><button
+                                class="copy-btn">Copy</button></div>
+                        <pre><code># 🎲 Number Guessing Game
+import random
+
+def guessing_game():
+    secret = random.randint(1, 100)
+    attempts = 0
+    max_attempts = 10
+
+    print("🎲 Number Guessing Game!")
+    print(f"Guess between 1-100 (Max {max_attempts} tries)")
+    print("-" * 30)
+
+    while attempts < max_attempts:
+        try:
+            guess = int(input(f"Attempt {attempts+1}: "))
+            attempts += 1
+
+            if guess == secret:
+                print(f"🎉 Correct! {secret} in {attempts} attempts!")
+                return
+            elif guess < secret:
+                print("📈 Too low! Go higher!")
+            else:
+                print("📉 Too high! Go lower!")
+        except ValueError:
+            print("Enter a valid number!")
+
+    print(f"😢 Game Over! Number was {secret}")
+
+guessing_game()</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERMEDIATE PROJECTS -->
+        <div id="proj-intermediate" class="tab-content">
+            <div class="topic-grid">
+                <div class="project-card">
+                    <div class="project-img intermediate-bg">📝</div>
+                    <div class="project-body">
+                        <span class="project-level intermediate">Intermediate</span>
+                        <h3>To-Do App</h3>
+                        <p>Tasks add, delete, complete karo — file mein save karo</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img intermediate-bg">📁</div>
+                    <div class="project-body">
+                        <span class="project-level intermediate">Intermediate</span>
+                        <h3>File Organizer</h3>
+                        <p>Automatically files ko type ke hisab se folders mein organize karo</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img intermediate-bg">📇</div>
+                    <div class="project-body">
+                        <span class="project-level intermediate">Intermediate</span>
+                        <h3>Contact Book</h3>
+                        <p>Contacts add, search, update, delete — JSON se save/load</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson" style="margin-top:40px;">
+                <div class="lesson-header"><span class="lesson-num">📝</span>
+                    <h2>Project: To-Do App</h2><span class="toggle-icon">▼</span>
+                </div>
+                <div class="lesson-body">
+                    <div class="code-block">
+                        <div class="code-header"><span class="code-lang">Python</span><button
+                                class="copy-btn">Copy</button></div>
+                        <pre><code># 📝 To-Do App with File Storage
+import json, os
+
+FILE = "todos.json"
+
+def load_todos():
+    if os.path.exists(FILE):
+        with open(FILE) as f: return json.load(f)
+    return []
+
+def save_todos(todos):
+    with open(FILE, "w") as f: json.dump(todos, f, indent=2)
+
+def show_todos(todos):
+    if not todos:
+        print("📭 No tasks yet!"); return
+    print("\n📋 Your Tasks:")
+    for i, t in enumerate(todos, 1):
+        status = "✅" if t["done"] else "⬜"
+        print(f"  {i}. {status} {t['task']}")
+
+def main():
+    todos = load_todos()
+    while True:
+        print("\n--- To-Do Menu ---")
+        print("1. View  2. Add  3. Complete  4. Delete  5. Quit")
+        ch = input("Choose: ")
+
+        if ch == "1": show_todos(todos)
+        elif ch == "2":
+            task = input("New task: ")
+            todos.append({"task": task, "done": False})
+            save_todos(todos)
+            print(f"✅ Added: {task}")
+        elif ch == "3":
+            show_todos(todos)
+            idx = int(input("Complete #: ")) - 1
+            if 0 <= idx < len(todos):
+                todos[idx]["done"] = True
+                save_todos(todos); print("Done! ✅")
+        elif ch == "4":
+            show_todos(todos)
+            idx = int(input("Delete #: ")) - 1
+            if 0 <= idx < len(todos):
+                removed = todos.pop(idx)
+                save_todos(todos)
+                print(f"🗑️ Deleted: {removed['task']}")
+        elif ch == "5": print("Bye! 👋"); break
+
+main()</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson" style="margin-top:16px;">
+                <div class="lesson-header"><span class="lesson-num">📁</span>
+                    <h2>Project: File Organizer</h2><span class="toggle-icon">▼</span>
+                </div>
+                <div class="lesson-body">
+                    <div class="code-block">
+                        <div class="code-header"><span class="code-lang">Python</span><button
+                                class="copy-btn">Copy</button></div>
+                        <pre><code># 📁 Automatic File Organizer
+import os, shutil
+
+def organize_folder(folder_path):
+    file_types = {
+        "Images": [".jpg",".jpeg",".png",".gif",".svg",".webp"],
+        "Documents": [".pdf",".doc",".docx",".txt",".xlsx",".pptx"],
+        "Videos": [".mp4",".mkv",".avi",".mov"],
+        "Music": [".mp3",".wav",".flac",".aac"],
+        "Code": [".py",".js",".html",".css",".java",".cpp"],
+        "Archives": [".zip",".rar",".7z",".tar"],
+    }
+
+    for filename in os.listdir(folder_path):
+        filepath = os.path.join(folder_path, filename)
+        if os.path.isdir(filepath): continue
+
+        ext = os.path.splitext(filename)[1].lower()
+        dest_folder = "Others"
+
+        for category, extensions in file_types.items():
+            if ext in extensions:
+                dest_folder = category; break
+
+        dest_path = os.path.join(folder_path, dest_folder)
+        os.makedirs(dest_path, exist_ok=True)
+        shutil.move(filepath, os.path.join(dest_path, filename))
+        print(f"📦 {filename} → {dest_folder}/")
+
+    print("✅ All files organized!")
+
+# Usage: organize_folder("C:/Users/you/Downloads")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADVANCED PROJECTS -->
+        <div id="proj-advanced" class="tab-content">
+            <div class="topic-grid">
+                <div class="project-card">
+                    <div class="project-img advanced-bg">🌐</div>
+                    <div class="project-body">
+                        <span class="project-level advanced">Advanced</span>
+                        <h3>Web App with Flask</h3>
+                        <p>Flask se simple web application banao</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img advanced-bg">🤖</div>
+                    <div class="project-body">
+                        <span class="project-level advanced">Advanced</span>
+                        <h3>ML Prediction App</h3>
+                        <p>Machine Learning model train karo aur predictions karo</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img advanced-bg">🕷️</div>
+                    <div class="project-body">
+                        <span class="project-level advanced">Advanced</span>
+                        <h3>Web Scraper</h3>
+                        <p>Websites se data automatically extract karo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson" style="margin-top:40px;">
+                <div class="lesson-header"><span class="lesson-num">🌐</span>
+                    <h2>Project: Flask Web App</h2><span class="toggle-icon">▼</span>
+                </div>
+                <div class="lesson-body">
+                    <div class="code-block">
+                        <div class="code-header"><span class="code-lang">Python</span><button
+                                class="copy-btn">Copy</button></div>
+                        <pre><code># 🌐 Simple Flask Web App
+# pip install flask
+from flask import Flask, render_template_string
+
+app = Flask(__name__)
+
+HTML = """
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;PyMaster App&lt;/title&gt;
+&lt;style&gt;
+  body { font-family: sans-serif; text-align: center;
+         padding: 50px; background: #1a1a2e; color: white; }
+  h1 { font-size: 3rem; }
+  .btn { padding: 12px 24px; background: #6366f1; color: white;
+         border: none; border-radius: 8px; font-size: 1rem;
+         cursor: pointer; text-decoration: none; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;🐍 PyMaster Flask App&lt;/h1&gt;
+  &lt;p&gt;Welcome! This is built with Python Flask.&lt;/p&gt;
+  &lt;a href="/about" class="btn"&gt;About&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"""
+
+@app.route("/")
+def home():
+    return render_template_string(HTML)
+
+@app.route("/about")
+def about():
+    return "&lt;h1&gt;About PyMaster&lt;/h1&gt;&lt;p&gt;A Python learning platform!&lt;/p&gt;"
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+                    </div>
+                    <div class="info-box tip"><span class="icon">🚀</span>
+                        <div>Run it: <code>python app.py</code> → Open <code>http://localhost:5000</code></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐍 PyMaster</h4>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Python seekhna ab hua aasan!</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Levels</h4>
+                    <ul>
+                        <li><a href="beginner.html">🌱 Beginner</a></li>
+                        <li><a href="intermediate.html">⚡ Intermediate</a></li>
+                        <li><a href="advanced.html">🔥 Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="practice.html">💻 Practice</a></li>
+                        <li><a href="projects.html">🚀 Projects</a></li>
+                        <li><a href="resources.html">📝 Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by PyMaster Team | © 2026</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

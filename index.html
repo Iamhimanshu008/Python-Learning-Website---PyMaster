@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PyMaster - Learn Python from Zero to Hero. Free, beginner-friendly Python tutorials with interactive examples, practice problems, and real-world projects.">
+  <title>PyMaster - Learn Python from Zero to Hero 🐍</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="logo-icon">🐍</span>
+        <span>PyMaster</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="beginner.html">Beginner</a></li>
+        <li><a href="intermediate.html">Intermediate</a></li>
+        <li><a href="advanced.html">Advanced</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙</button>
+      <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="hero">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Learn Python from<br><span class="highlight">Zero to Hero</span> 🐍</h1>
+      <p>Python seekhna ab hua aasan! Step-by-step tutorials, interactive examples, aur real-world projects ke saath Python master karo — bilkul free!</p>
+      <div class="hero-buttons">
+        <a href="beginner.html" class="btn btn-primary">🚀 Start Learning</a>
+        <a href="practice.html" class="btn btn-secondary">💻 Practice Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ROADMAP ======== -->
+  <section class="roadmap-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Learning Path</span>
+        <h2>Your Python Journey 🗺️</h2>
+        <p>Follow this roadmap to go from a complete beginner to a Python pro!</p>
+      </div>
+      <div class="roadmap reveal">
+        <div class="roadmap-step beginner">
+          <div class="step-icon">🌱</div>
+          <h3>Beginner</h3>
+          <p>Variables, Loops, Conditions — Python ki basic foundations seekho</p>
+          <div class="roadmap-connector"></div>
+        </div>
+        <div class="roadmap-step intermediate">
+          <div class="step-icon">⚡</div>
+          <h3>Intermediate</h3>
+          <p>Functions, OOP, File Handling — real-world skills build karo</p>
+          <div class="roadmap-connector"></div>
+        </div>
+        <div class="roadmap-step advanced">
+          <div class="step-icon">🔥</div>
+          <h3>Advanced</h3>
+          <p>APIs, ML, Multithreading — industry-level expertise achieve karo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FEATURES ======== -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Why PyMaster?</span>
+        <h2>Seekho, Practice Karo, Build Karo 💪</h2>
+        <p>Sab kuch ek jagah — theory, practice, aur projects</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="card-icon green">📖</div>
+          <h3>Step-by-Step Tutorials</h3>
+          <p>Har topic simple language mein samjhaya gaya hai with real-life examples aur Hinglish explanations.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="card-icon blue">💻</div>
+          <h3>Interactive Code Examples</h3>
+          <p>Har concept ke saath runnable code examples — copy karo, modify karo, aur samjho.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="card-icon purple">🧩</div>
+          <h3>Practice Problems</h3>
+          <p>Har topic ke baad practice questions — Easy, Medium, aur Hard difficulty levels mein.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="card-icon orange">🚀</div>
+          <h3>Real-World Projects</h3>
+          <p>Calculator se lekar ML project tak — har level ke liye hands-on projects.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="card-icon pink">🎨</div>
+          <h3>Visual Diagrams</h3>
+          <p>Flow diagrams, tables, aur visuals se concepts crystal clear ban jaate hain.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="card-icon cyan">📝</div>
+          <h3>Cheat Sheets & Resources</h3>
+          <p>Quick reference cards, interview questions, aur downloadable notes — sab kuch available!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== QUICK START ======== -->
+  <section class="content-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Quick Start</span>
+        <h2>Apna Pehla Python Code Likho! ✍️</h2>
+        <p>Dekho kitna easy hai Python mein code likhna</p>
+      </div>
+      <div class="container-narrow reveal">
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <pre><code># Apna pehla Python program! 🎉
+print("Hello, World!")
+print("Mera naam PyMaster hai!")
+
+# Variables ka use
+name = "Himanshu"
+age = 20
+
+print(f"Hi, mera naam {name} hai aur main {age} saal ka hoon!")
+print(f"Main Python seekh raha hoon! 🐍")</code></pre>
+        </div>
+        <div class="output-block">
+          <div class="output-label">📤 Output:</div>
+          Hello, World!<br>
+          Mera naam PyMaster hai!<br>
+          Hi, mera naam Himanshu hai aur main 20 saal ka hoon!<br>
+          Main Python seekh raha hoon! 🐍
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TOPICS OVERVIEW ======== -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Curriculum</span>
+        <h2>Kya Seekhoge? 📚</h2>
+        <p>Har level mein carefully curated topics</p>
+      </div>
+
+      <div class="tabs reveal">
+        <button class="tab-btn active" data-tab="tab-beginner">🌱 Beginner</button>
+        <button class="tab-btn" data-tab="tab-intermediate">⚡ Intermediate</button>
+        <button class="tab-btn" data-tab="tab-advanced">🔥 Advanced</button>
+      </div>
+
+      <div id="tab-beginner" class="tab-content active">
+        <div class="topic-grid">
+          <div class="topic-card reveal">
+            <span class="topic-number">1</span>
+            <h3>What is Python?</h3>
+            <p>Python kya hai, kyun seekhein, aur kahan use hota hai — real-life analogies ke saath</p>
+            <div class="topic-tags"><span class="tag">Intro</span><span class="tag">History</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">2</span>
+            <h3>Installing Python</h3>
+            <p>Windows, Mac, Linux pe Python install karne ka complete guide</p>
+            <div class="topic-tags"><span class="tag">Setup</span><span class="tag">IDE</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">3</span>
+            <h3>Your First Program</h3>
+            <p>Hello World likho aur print() function samjho</p>
+            <div class="topic-tags"><span class="tag">print()</span><span class="tag">Syntax</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">4</span>
+            <h3>Variables & Data Types</h3>
+            <p>int, float, str, bool — data store karna seekho</p>
+            <div class="topic-tags"><span class="tag">Variables</span><span class="tag">Types</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">5</span>
+            <h3>Input & Output</h3>
+            <p>User se input lo aur formatted output dikhao</p>
+            <div class="topic-tags"><span class="tag">input()</span><span class="tag">f-strings</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">6</span>
+            <h3>Operators</h3>
+            <p>Arithmetic, comparison, logical — sab operators ek jagah</p>
+            <div class="topic-tags"><span class="tag">Math</span><span class="tag">Logic</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">7</span>
+            <h3>Conditional Statements</h3>
+            <p>if, elif, else — decisions lena seekho with flow diagrams</p>
+            <div class="topic-tags"><span class="tag">if/else</span><span class="tag">Logic</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">8</span>
+            <h3>Loops</h3>
+            <p>for loop, while loop, nested loops — repetition ki power samjho</p>
+            <div class="topic-tags"><span class="tag">for</span><span class="tag">while</span></div>
+          </div>
+          <div class="topic-card reveal">
+            <span class="topic-number">9</span>
+            <h3>Strings Deep Dive</h3>
+            <p>String methods, slicing, formatting — sab kuch detail mein</p>
+            <div class="topic-tags"><span class="tag">Strings</span><span class="tag">Methods</span></div>
+          </div>
+        </div>
+        <div class="text-center mt-4 reveal">
+          <a href="beginner.html" class="btn btn-accent">📖 Start Beginner Level →</a>
+        </div>
+      </div>
+
+      <div id="tab-intermediate" class="tab-content">
+        <div class="topic-grid">
+          <div class="topic-card">
+            <span class="topic-number">1</span>
+            <h3>Functions & Scope</h3>
+            <p>Apne khud ke functions banao, parameters, return values samjho</p>
+            <div class="topic-tags"><span class="tag">def</span><span class="tag">*args</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">2</span>
+            <h3>Lists</h3>
+            <p>Python ki sabse useful data structure — complete guide</p>
+            <div class="topic-tags"><span class="tag">List</span><span class="tag">Methods</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">3</span>
+            <h3>Tuples & Sets</h3>
+            <p>Immutable tuples aur unique sets — kab aur kyun use karein</p>
+            <div class="topic-tags"><span class="tag">Tuple</span><span class="tag">Set</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">4</span>
+            <h3>Dictionaries</h3>
+            <p>Key-value pairs, methods, comprehensions — complete reference</p>
+            <div class="topic-tags"><span class="tag">Dict</span><span class="tag">JSON</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">5</span>
+            <h3>File Handling</h3>
+            <p>Files read/write karo — text, CSV, JSON sab cover</p>
+            <div class="topic-tags"><span class="tag">File I/O</span><span class="tag">CSV</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">6</span>
+            <h3>Exception Handling</h3>
+            <p>Errors ko gracefully handle karo — try/except master karo</p>
+            <div class="topic-tags"><span class="tag">try/except</span><span class="tag">Errors</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">7</span>
+            <h3>OOP Basics</h3>
+            <p>Classes, Objects, Inheritance — Object-Oriented Programming seekho</p>
+            <div class="topic-tags"><span class="tag">Class</span><span class="tag">OOP</span></div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="intermediate.html" class="btn btn-accent">⚡ Start Intermediate Level →</a>
+        </div>
+      </div>
+
+      <div id="tab-advanced" class="tab-content">
+        <div class="topic-grid">
+          <div class="topic-card">
+            <span class="topic-number">1</span>
+            <h3>Advanced OOP</h3>
+            <p>Abstract classes, magic methods, composition patterns</p>
+            <div class="topic-tags"><span class="tag">ABC</span><span class="tag">__dunder__</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">2</span>
+            <h3>Modules & Packages</h3>
+            <p>Import system, custom packages, pip management</p>
+            <div class="topic-tags"><span class="tag">import</span><span class="tag">pip</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">3</span>
+            <h3>Decorators & Generators</h3>
+            <p>Advanced Python patterns — closures, yield, lazy evaluation</p>
+            <div class="topic-tags"><span class="tag">@decorator</span><span class="tag">yield</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">4</span>
+            <h3>Lambda & Functional</h3>
+            <p>lambda, map, filter, reduce — functional programming in Python</p>
+            <div class="topic-tags"><span class="tag">lambda</span><span class="tag">map</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">5</span>
+            <h3>APIs & Web Scraping</h3>
+            <p>REST APIs call karo, web pages scrape karo</p>
+            <div class="topic-tags"><span class="tag">requests</span><span class="tag">BS4</span></div>
+          </div>
+          <div class="topic-card">
+            <span class="topic-number">6</span>
+            <h3>Data Science & ML Intro</h3>
+            <p>NumPy, Pandas, scikit-learn — ML journey start karo</p>
+            <div class="topic-tags"><span class="tag">NumPy</span><span class="tag">ML</span></div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="advanced.html" class="btn btn-accent">🔥 Start Advanced Level →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section class="content-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="features-grid reveal">
+        <div class="feature-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">📚</div>
+          <h3 style="font-size: 2.5rem; color: var(--accent-primary);">50+</h3>
+          <p>Detailed Tutorials</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">💡</div>
+          <h3 style="font-size: 2.5rem; color: var(--accent-green);">200+</h3>
+          <p>Code Examples</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">🧩</div>
+          <h3 style="font-size: 2.5rem; color: var(--accent-orange);">100+</h3>
+          <p>Practice Problems</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">🚀</div>
+          <h3 style="font-size: 2.5rem; color: var(--accent-pink);">15+</h3>
+          <p>Real Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA SECTION ======== -->
+  <section class="hero" style="min-height: 50vh;">
+    <div class="hero-content reveal">
+      <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); color: white; margin-bottom: 16px;">
+        Ready to Start Your Python Journey? 🚀
+      </h2>
+      <p>Aaj hi shuru karo — zero experience needed!</p>
+      <div class="hero-buttons">
+        <a href="beginner.html" class="btn btn-primary">🌱 Begin from Basics</a>
+        <a href="practice.html" class="btn btn-secondary">💻 Try Coding Playground</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>🐍 PyMaster</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Python seekhna ab hua aasan! Free, beginner-friendly tutorials for everyone.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Learning Paths</h4>
+          <ul>
+            <li><a href="beginner.html">🌱 Beginner Level</a></li>
+            <li><a href="intermediate.html">⚡ Intermediate Level</a></li>
+            <li><a href="advanced.html">🔥 Advanced Level</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Practice</h4>
+          <ul>
+            <li><a href="practice.html">💻 Coding Playground</a></li>
+            <li><a href="projects.html">🚀 Projects</a></li>
+            <li><a href="resources.html">📝 Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="resources.html#cheatsheets">📋 Cheat Sheets</a></li>
+            <li><a href="resources.html#interview">❓ Interview Questions</a></li>
+            <li><a href="resources.html#books">📚 Recommended Books</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Made with ❤️ by PyMaster Team | © 2026 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
