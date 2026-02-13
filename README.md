@@ -20,7 +20,7 @@ A modern, beginner-friendly Python learning website with interactive examples, p
 
 ## 🚀 Live Demo
 
-👉 [Visit PyMaster](https://YOUR_USERNAME.github.io/pymaster/)
+👉 [Visit PyMaster](https://iamhimanshu008.github.io/Python-Learning-Website---PyMaster/)
 
 ## 📂 Project Structure
 
